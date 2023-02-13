@@ -1,6 +1,10 @@
-import Layout from '../layouts/Layout.astro';
+---
+layout: '../layouts/Layout.astro'
+title: 'MEDICAL STAFF LEADERSHIP - October 1, 2022 - September 20, 2023'
+---
 
 <Layout>
+<!--# {frontmatter.title} -->
 
 # MEDICAL STAFF LEADERSHIP - October 1, 2022 - September 20, 2023
 
@@ -61,3 +65,13 @@ import Layout from '../layouts/Layout.astro';
 - Urology Ryan Daniel Black, MD
 
 </Layout>
+
+<style>
+h1, h2, h3 {
+    padding: 1em;
+}
+
+ul {
+  padding: 2em;
+}
+</style>
