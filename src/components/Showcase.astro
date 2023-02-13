@@ -1,0 +1,81 @@
+---
+// import logos from '../images/framework-logos.png'
+// import logosSmall from '../images/framework-logos-small.png'
+// import bg from '../images/top-bg.jpg';
+
+export interface Props {
+  heading?: string;
+  text?: string;
+  showExtra?: boolean;
+}
+
+const { heading = "Huntsville Hospital Medical Staff News", text="A site for news and other useful information for our medical staff.", showExtra = false } = Astro.props as Props;
+---
+
+<section class="showcase">
+  <div class="showcase-text">
+   <h1>{heading}</h1>
+    <p>
+      {text}
+    </p>
+  </div>
+
+  <!-- {showExtra && <>
+    <div class="showcase-img">
+    <img class="logos" src={logos} alt="" />
+    <img class="logos-small" src={logosSmall} alt="" />
+  </div> -->
+<!-- {showExtra && <>
+  <p class="showcase-demo">
+    <small>This is some small text that I can use for something.</small>
+  </p>
+  </>} -->
+</section>
+
+<style>
+  .showcase {
+    height: auto;
+    background-color: #000;
+    /* background-image: linear-gradient(to bottom,var(--color-primary), #005c3d); */
+    background-image: linear-gradient(to bottom,var(--color-primary), #002000);
+    padding: 30px;
+}
+
+.showcase-blog {
+  min-height: 300px;
+}
+
+.showcase-text {
+  font-family: 'Times New Roman', Times, serif;
+  max-width: 500px;
+  color: #fff;
+  text-align: center;
+  margin: 50px auto;
+}
+
+.showcase h1 {
+  font-size: 50px;
+  color: #fff;
+  margin-bottom: 20px;
+}
+
+.showcase p {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.showcase-img {
+  text-align: center;
+}
+
+.showcase-img img {
+  border-radius: 10px;
+  margin: auto;
+}
+
+.showcase-demo {
+  color: #fff;
+  text-align: center;
+  font-weight: 300;
+}
+</style>
