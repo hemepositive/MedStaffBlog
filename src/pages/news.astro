@@ -3,7 +3,9 @@ import Layout from '../layouts/Layout.astro';
 import Showcase from '../components/Showcase.astro';
 import Card from '../components/Card.astro';
 
-const posts = await Astro.glob('../posts/*.md');
+// const posts = await Astro.glob('../posts/*.md');
+const posts = await Astro.glob('../posts/HH-MS-News/*.md');
+
 ---
 
 <Layout title="HH Medical Staff News">
