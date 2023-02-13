@@ -1,8 +1,4 @@
----
 import Layout from '../layouts/Layout.astro';
-import Card from '../components/Card.astro'
-title: "Medical Staff Leadership"
----
 
 <Layout>
 
@@ -65,46 +61,3 @@ title: "Medical Staff Leadership"
 - Urology Ryan Daniel Black, MD
 
 </Layout>
-
-{/\* <Layout title="HH Medical Staff Leaders">
-
-  <section class="page-content">
-    <div class="container">
-      <h2></h2>
-
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde
-        doloribus, vel ipsum mollitia aliquid cumque commodi corrupti omnis
-        ipsam sit earum, dolore quisquam harum qui non, quasi ea voluptatum
-        debitis!
-      </p>
-
-
-        <!-- <h3>Join our Community</h3>
-        <p>
-          Join us in the Astro Discord to share with and get help from an
-          active, friendly community!
-        </p>
-
-        <ul>
-          <li>💬 Say hi in our #introduce-yourself channel!</li>
-          <li>
-            💬 Ask our Support Squad a question in our #support-threads
-            channel!
-          </li>
-          <li>
-            💬 Share what you've been working on in our #showcase channel!
-          </li>
-        </ul> -->
-
-
-        <Card dark={true}>
-          <h3>Thank you leaders!</h3>
-          <p>
-            These individuals are volnteering their time and enery to make our hospital better.
-          </p>
-        </Card>
-      </div>
-
-  </section>
-</Layout> */}
