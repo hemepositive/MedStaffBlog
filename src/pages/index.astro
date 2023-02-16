@@ -1,27 +1,53 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Showcase from '../components/Showcase.astro';
-import Features from '../components/Features.astro';
-import Tabs from '../components/Tabs.astro';
+import Card from '../components/Card.astro';
+
+const posts = await Astro.glob('../posts/*.md');
+// const posts = await Astro.glob('../HH-MS-News/posts/*.md');
+
 ---
 
-<Layout>
-	<Showcase showExtra={true} />
-	<Features />
-	
-	<section class="page-content">
-		<div class="container">
-			<h2>The HH Medical Staff Office</h2>
-			<!-- <p>
-				Reach out to the staff member you need to talk to.
-			</p> -->
-		
-			<Tabs headings={['Robert Chappell', 'Jonathan White', 'Megan Leech']} contents={['(256)265-6990', '(256)265-2879', '(256)265-2799']} />
-
-			<h3>Let us know if something need attention</h3>
-			<p>
-				We are here to help you practice medicine and take care of your patients. We are interested to hear from you if you have any concerns or see opportunities for improving our hospital. Please reach out to us.
-			</p>
-		</div>
-	</section>
+<Layout title="HH Medical Staff News">
+  <Showcase heading="Med Staff News" text="Periodic updates for our medical staff" />
+  <section class="page-content">
+    <div class="container">
+      {posts.map(post => (
+        <Card>
+          <h3>{post.frontmatter.title}</h3>
+          <div>
+          Written by <strong>{post.frontmatter.author} </strong> on {new Date(post.frontmatter.date).toLocaleDateString()}
+        </div>
+          <p>{post.frontmatter.excerpt}</p>  
+          <a class="more-btn" href={`/${post.frontmatter.slug}`}>Read More</a>
+        </Card>
+      ))}
+    </div>
+  </section>
 </Layout>
+
+
+<style>
+  
+/* Prevent link color change when visited
+a,
+a:hover, 
+a:active  
+a:visited {
+  color: inherit; 
+  color: (var(--color-goldish));
+}  */
+
+.more-btn {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  /* background: #5c0054; */
+  background: var(--color-secondary);
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+}
+</style>

@@ -1,0 +1,75 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Features from '../components/Features.astro';
+import Card from '../components/Card.astro';
+// import Showcase from '../components/Showcase.astro';
+// import Tabs from '../components/Tabs.astro';
+
+const staffData = [
+  { name: 'Megan Leach', title: 'Director of Medical Staff Services',phone: '(256)265-2799'},
+  {name: 'Elizabeth Jones', title: 'Credentialing Specialist - Physician Applicants', phone: '(256)265-6755'},
+  {name: 'Nichelle Russell', title: 'Credentialing Specialist - Physician Reappointments', phone: '(256)265-8044'},
+  {name: 'Kenya Halliburton', title: 'Credentialing Specialist - Allied Health Professional Applicants', phone: '(256)265-8856'},
+  {name: 'Sierra Manlapaz', title: 'Credentialing Specialist - Allied Health Professional Reappointments', phone: '(256)265-8858'},
+  {name: 'Monique Gilliam', title: 'Department Assistant', phone: '(256)265-3719'},
+];
+---
+
+<Layout>
+	<!-- <Showcase showExtra={true} /> -->
+
+	
+	<section class="page-content">
+		<div class="container">
+			<h2>The HH Medical Staff Office</h2>
+			</div>
+		</section>
+
+			<section class="features">
+			<div class="container">
+			{staffData.map(person => (
+      <Card>
+        <h4>{person.name}</h4>
+        <p>{person.title}</p>
+				<p>{person.phone}</p>
+      </Card>
+    ))}
+
+			<!-- <ul>	<li>
+				<em>Director of Medical Staff Services</em>
+			Megan Leach&nbsp;(256)265-2799</li>
+      </ul>
+      <ul><h4>Credentialing Specialists</h4>
+				<li>Elizabeth Haliburton 256-8856s</li>
+				<li>Megan extension 5-xxxx</li>
+				<li>Megan extension 5-xxxx</li>
+			</ul>
+		 -->
+			<!-- <Tabs headings={['Robert Chappell', 'Jonathan White', 'Megan Leech']} contents={['(256)265-6990', '(256)265-2879', '(256)265-2799']} /> -->
+	    <!-- <Features /> -->
+
+			<!-- <h3>Let us know if something need attention</h3>
+			<p>
+				We are here to help you practice medicine and take care of your patients. We are interested to hear from you if you have any concerns or see opportunities for improving our hospital. Please reach out to us.
+			</p> -->
+			</div>
+
+			</section>
+</Layout>
+
+<style>
+  .features .container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+    padding: 0 20px;
+    margin: 30px auto;
+  }
+
+  @media (max-width: 500px) {
+  .features .container {
+    grid-template-columns: 1fr;
+  }
+}
+
+</style>
