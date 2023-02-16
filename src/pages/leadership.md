@@ -62,7 +62,7 @@ title: 'MEDICAL STAFF LEADERSHIP - October 1, 2022 - September 20, 2023'
 ## DIVISION VICE CHIEFS:
 
 - General Surgery Jeffrey A. Walker, MD
-- Urology Ryan Daniel Black, MD
+- Urology Ryan D. Black, MD
 
 </Layout>
 
