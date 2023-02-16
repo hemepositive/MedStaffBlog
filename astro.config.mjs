@@ -5,5 +5,4 @@ import { defineConfig } from 'astro/config';
 
 export default defineConfig({
   site: 'https://hemepositive.github.io',
-  base: '/HH-MS-News',
 });
