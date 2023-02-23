@@ -9,7 +9,7 @@ const posts = await Astro.glob('../posts/*.md');
 ---
 
 <Layout title="HH Medical Staff News">
-  <Showcase heading="Med Staff News" text="Periodic updates for our medical staff" />
+  <Showcase heading="Medical Staff News" text="Periodic updates for our medical staff" />
   <section class="page-content">
     <div class="container">
       {posts.map(post => (
