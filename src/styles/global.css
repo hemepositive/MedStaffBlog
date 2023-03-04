@@ -1,9 +1,6 @@
 :root {
-  /* --color-primary: #0f172a;
-  --color-secondary: #6b21a8; */
   --color-primary: #00833d;
   --color-secondary: #0040ae;
-  /* --color-green: #00833d; */
   --color-green-darker: #005c3d;
   --color-purple: #830078;
   --color-purple-darker: #5c0054;
@@ -28,7 +25,8 @@ body {
 
 a {
   text-decoration: none;
-  color: #333;
+  /* color: #333; */
+  color: white;
 }
 
 p {
