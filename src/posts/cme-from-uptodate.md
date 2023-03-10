@@ -16,7 +16,7 @@ To access this benefit, you must create a personal login with UpToDate. Once you
 To maintain uninterrupted access to UpToDate, you must re-verify your affiliation with your organization once every 90 days. Re-verifying can be done using either of the options listed below.
 
 - Access UpToDate via your organization's EHR or portal at least once every 90 days. This will automatically re-verify your affiliation, and you will not receive any re-verification messaging. This method requires no UpToDate.com log in.
-- Log into UpToDate by going to <a class="inline-link" href="www.uptodate.com">UpToDate</a> from a computer connected to your organization's network. This method requires you to log in to UpToDate.
+- Log into UpToDate by going to <a class="inline-link" href="https://www.uptodate.com">UpToDate</a> from a computer connected to your organization's network. This method requires you to log in to UpToDate.
 
 ### Contact for more information
 
