@@ -14,10 +14,10 @@ Hospitals should be the safest places on earth however, as you are all aware, th
 
 In 2019, Huntsville Hospital started training staff to operate as a “high-reliability organization.” Examples of high-reliability organizations include air traffic control systems, nuclear power plants, and other organizations that require high-performance processes to prevent disaster. These types of organizations use processes that we at Huntsville Hospital can use to improve patient safety. Organizations that diligently follow these principles have experienced an 80% decrease in serious safety events. Some examples of these high-reliability principles used by our staff include the following:
 
-Nursing communication through SBAR format.
-Crosschecking
-Speaking up using ARCC
-Keeping attention on task with STAR
-Situational awareness through a daily Safety Call
+- Nursing communication through SBAR format.
+- Crosschecking
+- Speaking up using ARCC
+- Keeping attention on task with STAR
+- Situational awareness through a daily Safety Call
 
 Many other HRO principles are being used every day at Huntsville Hospital. These tools are helping prevent harm to our patients, but more must be done. If you would like to be trained for the first time or go through a refresher, training sections are available through our Quality Management department. Call them at (256)265-2745 to find out more regarding HRO training.

@@ -8,8 +8,6 @@ author: Megan Leach
 
 ### Medical Staff Changes in 2022
 
-<!-- --- -->
+In 2022 the Huntsville Hospital Medical Staff continued to grow with the addition of 67 physicians representing 27 specialties joining the medical staff.
 
-- In 2022 the Huntsville Hospital Medical Staff continued to grow with the addition of 67 physicians representing 27 specialties joining the medical staff.
-
-- 15 physicians retired from active practice and transferred to the Emeritus Category.
+15 physicians retired from active practice and transferred to the Emeritus Category.

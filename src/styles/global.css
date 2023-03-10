@@ -34,7 +34,8 @@ p {
 }
 
 ul {
-  list-style: none;
+  list-style-type: disc;
+  list-style-position: inside;
 }
 
 li {
