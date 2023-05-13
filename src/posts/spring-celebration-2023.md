@@ -6,9 +6,8 @@ date: 2023-05-13
 author: Jonathan White
 ---
 
-<hr/>
-
 <div class="image-container">
+<h2 class="date">Friday May 19, 2023</h2>
   <img src="/springcelebration2023invite.jpg" alt="Image of Invitation to Spring Celebration">
 </div>
 
@@ -29,6 +28,7 @@ Enjoy the entire U.S. Space and Rocket Center complex.
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
 }
 
 .container img {
@@ -39,6 +39,11 @@ Enjoy the entire U.S. Space and Rocket Center complex.
 .inline-link {
   text-decoration: none;
   color: var(--color-secondary);
+}
+
+.date{
+  color: red;
+  /* color: var(--color-purple); */
 }
 
 /* a[href^="mailto:"]::after {
