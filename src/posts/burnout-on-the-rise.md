@@ -53,7 +53,7 @@ For those who recognize they may have some element of burnout, you are not alone
   align-items: center;
 }
 
-.container img {
+.image-container img {
   max-width: 100%;
   height: auto;
 }

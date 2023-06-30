@@ -21,8 +21,4 @@ Jonathan assumed the role of Vice President of Medical Affairs for Huntsville Ho
   align-items: center;
 }
 
-.container img {
-  max-width: 100%;
-  height: auto;
-}
 </style>
