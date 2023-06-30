@@ -21,7 +21,7 @@ If you have not met the substance abuse specific eight-hour training requirement
 [American Society of Addiction Medicine DEA Requirement Training | ASAM](https://www.asam.org/education/dea-education-requirements)
 
 <style>
-  a {
+  a:not(.nav-link)  {
     text-decoration: none;
     color: var(--color-secondary);
 }

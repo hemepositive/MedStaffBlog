@@ -52,7 +52,7 @@ Category: ALAHOPE Substance Use (12) and/or Opioid Training Institute (7) and/or
 - ALAHOPE Recorded Courses (12) – 0.30 to 0.60 AMA PRA Category 1 Credit ™
 
 <style>
-a {
+a:not(.nav-link) {
   text-decoration: none;
   color: var(--color-secondary);
 }

@@ -31,11 +31,6 @@ Enjoy the entire U.S. Space and Rocket Center complex.
   flex-direction: column;
 }
 
-.container img {
-  max-width: 100%;
-  height: auto;
-}
-
 .inline-link {
   text-decoration: none;
   color: var(--color-secondary);
@@ -43,10 +38,6 @@ Enjoy the entire U.S. Space and Rocket Center complex.
 
 .date{
   color: red;
-  /* color: var(--color-purple); */
 }
 
-/* a[href^="mailto:"]::after {
-  content: "megan.leach@hhsys.org";
-} */
 </style>

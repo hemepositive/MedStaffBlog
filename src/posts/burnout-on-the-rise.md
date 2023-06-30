@@ -42,7 +42,7 @@ For those who recognize they may have some element of burnout, you are not alone
 [^1]: [Medscape Physician Burnout & Depression Report](https://www.medscape.com/slideshow/2023-lifestyle-burnout-6016058)
 
 <style>
-a {
+ a:not(.nav-link) {
   text-decoration: none;
   color: var(--color-secondary);
 }

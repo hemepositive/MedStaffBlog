@@ -6,7 +6,7 @@ title: 'Physician Burnout Help'
 <Layout>
 
 <div class="image-container">
-<h1>Get Help for Burnout through Live Well Foundation</h1>
+<h1>Get Help For Burnout Through Live Well Foundation</h1>
 <img src="/LWF-flier-2023.png" alt="Live Well Foundation Banner.">
 </div>
 
@@ -26,10 +26,8 @@ ul {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-}
-
-.container img {
   max-width: 100%;
   height: auto;
 }
+
 </style>
