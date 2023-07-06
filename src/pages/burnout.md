@@ -26,8 +26,15 @@ ul {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+}
+
+.image-container img {
   max-width: 100%;
   height: auto;
 }
+
+/* @media (max-width: 480px) {
+
+} */
 
 </style>
