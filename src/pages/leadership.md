@@ -6,61 +6,25 @@ title: 'MEDICAL STAFF LEADERSHIP'
 <Layout>
 <!--# {frontmatter.title} -->
 
-# MEDICAL STAFF LEADERSHIP – October 1, 2023 – September 30, 2024
+# MEDICAL STAFF LEADERSHIP – October 1, 2024 – September 30, 2025
 
-## OFFICERS:
-
-- President: Darrin L. Johnson, MD
-- Vice President: Paul B. Tabereaux, MD
-- Secretary: Jessica S. Branscome, MD
-
-## DEPARTMENT CHAIRS & SERVICE REPRESENTATIVES:
-
-- Anesthesiology: Casey Smith, MD
-- Emergency Medicine: Mathias Allen, MD
-- Family Medicine: Rinkesh Patel, MD
-- Medicine: Sudheer Kantharajpur, MD
-- Obstetrics and Gynecology: Leon Lewis, MD
-- Pathology: Allen Perkins, MD
-- Pediatrics: Emily Ladner, MD
-- Psychiatry: Senthil Rajaram, MD
-- Radiology: Austin Faulkner, MD
-- Surgery: Rhett Murray, MD
-- Madison Hospital: Jeffrey Johnson, MD
-- Ambulatory/Primary Care: Joseph Randall, Jr., MD
-- Orthopedic Services: Joseph Clark, MD
-
-## DEPARTMENT VICE-CHAIRS:
-
-- Anesthesiology: Matthew Culling, MD
-- Emergency Medicine: Scott Pfitzer, MD
-- Family Medicine: Hemil Parikh, MD
-- Medicine: Heather Haley, DO
-- Obstetrics and Gynecology: Robin Cardwell, MD
-- Pathology: Grant Harrison, MD
-- Pediatrics: Kelli Stringer, MD
-- Psychiatry: Praveen Jetty, MD
-- Radiology: Stephanie Jiminez, MD
-- Surgery: Christopher T. Parks, MD
-
-## DIVISION CHIEFS:
-
-- Cardiothoracic Surgery: Shaf Holden, MD
-- Dentistry: Richard Butler, Jr., DDS
-- General Surgery: Jeff Walker, MD
-- Neurosurgery: Joel Pickett, MD
-- Oral/Maxillofacial Surgery: Clint Hudson, DMD, MD
-- Orthopedic Surgery: Christopher Parks, MD
-- Otolaryngology: Stephen Brigance, MD
-- Plastic Surgery: William Alison, Jr., MD
-- Critical Care/Trauma Surgery: Rony Najjar, MD
-- Urology: Daniel Osula, MD
-- Vascular Surgery: Fred Stucky, III, MD
-
-## DIVISION VICE CHIEFS:
-
-- General Surgery: Mark Zelickson, MD
-- Urology: Ryan Black, MD
+Paul B. Tabereaux, MD (President of Staff)
+Jessica S. Branscome, MD (Vice President of Staff)
+Jeffrey A. Walker, MD (Secretary)
+Casey C. Smith, MD (Chair, Anesthesiology)
+Mathias W. Allen, MD (Chair, Emergency Medicine)
+Hemil S. Parikh, MD (Chair, Family Medicine)
+Heather L. Haley, DO (Chair, Medicine)
+Leon W. Lewis, MD (Chair, OB/GYN)
+L. Allen Perkins, MD (Chair, Pathology)
+Kelli R. Stringer, MD (Chair, Pediatrics
+Senthil V.R. Rajaram Manoharan, MD (Chair, Psychiatry)
+Austin R. Faulkner, MD (Chair, Radiology)
+Christopher T. Parks, MD (Chair, Surgery)
+Sudheer R. Kantharajpur, MD (Hospitalist Services)
+Joseph W. Clark, MD (Orthopedic Services)
+Jeffrey S. Johnson, MD (Madison Hospital)
+Joseph L. Randall, Jr, MD (Ambulatory/Primary Care Services)
 
 </Layout>
 
