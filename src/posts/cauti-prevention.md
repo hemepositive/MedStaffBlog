@@ -1,5 +1,5 @@
 ---
-title: Cather Associated Urinary Tract Infection Prevention
+title: Catheter Associated Urinary Tract Infection Prevention
 slug: CAUTI-prevention
 excerpt: Catheter-associated urinary tract infections (CAUTIs) are a significant problem. These infections are substantial sources of patient morbidity, extended hospital stays, and increased healthcare costs to our hospital and our patients...
 date: 2024-09-16
