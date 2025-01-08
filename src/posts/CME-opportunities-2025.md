@@ -47,30 +47,30 @@ author: Jonathan White
 #### 2025 Psychiatric Conference
 
 - Friday, February 28, 2025
-- Save the date. [More infomation to come here](https://www.huntsvillehospital.org/conferences)
+- Save the date. [More infomation to come...](https://www.huntsvillehospital.org/conferences)
 
 #### Huntsville Hospital's Quality Management Department presents: 2025 Patient Safety Symposium
 
 - Friday, March 14, 2025
 - Campus 805
-- Save the date. [More infomation to come here](https://www.huntsvillehospital.org/conferences)
+- Save the date. [More infomation to come...](https://www.huntsvillehospital.org/conferences)
 
 #### 2025 Foundations of Neurology & Neurosurgery Conference
 
 - Saturday, April 5, 2025
-- Save the date. [More infomation to come here](https://www.huntsvillehospital.org/conferences)
+- Save the date. [More infomation to come...](https://www.huntsvillehospital.org/conferences)
 
 #### 2025 Pediatric Conference
 
 - Friday, May 2, 2025
-- Save the date. [More infomation to come here](https://www.huntsvillehospital.org/conferences)
+- Save the date. [More infomation to come...](https://www.huntsvillehospital.org/conferences)
 
-### **For more information contact the HH CE/CME Manager**
+#### For more information contact the HH CE/CME Manager:
 
-Kristen Oglesby, RN
-Corporate University
-Office: 256-265-8500
-[HH Educational Conferences](https://www.huntsvillehospital.org/conferences)
+- Kristen Oglesby, RN
+- Corporate University
+- Office: 256-265-8500
+- [HH Educational Conferences](https://www.huntsvillehospital.org/conferences)
 
 <style>
 
