@@ -33,9 +33,7 @@ For these reasons, delirium is considered an important healthcare quality indica
 
 ### Delirium is a key element of the "Mentation" M of the 4 Ms of Age-Friendly Care.
 
-![4 Ms of Age-Friendly Care Graphic](Delirium_photo.png)
-
-<!-- <img src="Delirium_photo.png"></img> -->
+![4 Ms of Age-Friendly Care Graphic](/Delirium_photo.png)
 
 ## Delirium Quick List
 
