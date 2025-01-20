@@ -60,7 +60,7 @@ For these reasons, delirium is considered an important healthcare quality indica
 - Ensure home CPAP/BiPAP is ordered/use, if applicable
 - Consider consultation with geriatrics (for 65+), behavioral health, and/or neurology as appropriate
 
-### \*HIGH RISK MEDICATIONS IN DELIRIUM INCLUDE:
+### HIGH RISK MEDICATIONS IN DELIRIUM INCLUDE:
 
 - Anticholinergics (e.g., scopolamine)
 - Antihistamines (e.g., diphenhydramine)
@@ -83,7 +83,7 @@ Consider the following actions, as clinically appropriate:
 - ICU level of care
 - Mechanical Ventilation >24 hrs
 - New surgical procedure
-- Use of high risk medications\*
+- Use of high risk medications
 
 **NON-MODIFIABLE risk factors** for delirium include:
 
@@ -120,7 +120,7 @@ Consider the following actions, as clinically appropriate:
 - **Communication barriers**: Ensure hearing aids and eyeglasses used if applicable; provide communication aids and/or involve SLP
 - **Poor social/cognitive support**: Encourage/support family interaction; provide cognitive stimulating activities
 - **Active/undertreated pain**: Consider scheduled acetaminophen [no more than 3-4 g/24h]; provide non-pharmacologic measures to reduce pain, including mobilization/repositioning
-- **Use of high risk medications\***: Discontinue/reduce high risk medications as clinically appropriate
+- **Use of high risk medications**: Discontinue/reduce high risk medications as clinically appropriate
 
 ### 4. INVOLVE THE PATIENT'S FAMILY MEMBER/NEXT OF KIN in decisions and transitions of care.
 
@@ -140,8 +140,8 @@ Learn more at:
 
 ### Coming Soon
 
-- Delirium toolkit items (useful for distraction, avoidance of restraints) will soon be available for nursing staff to order through central supply
-- Cerner "delirium powerplan" is being built, but not yet live
+- Delirium toolkit items (useful for distraction, avoidance of restraints) will soon be available for nursing staff to order through central supply.
+- The Cerner "Delirium Powerplan" is being built, but it is not yet live.
 
 ---
 
