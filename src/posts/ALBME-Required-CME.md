@@ -1,6 +1,6 @@
 ---
-title: New Required CME from the ALBME - Professional Boundries
-slug: ALBME-Required-CME
+title: New Required CME from the ALBME - Professional Boundaries
+slug: ALBME-Professional-Boundaries-CME
 excerpt: The ALBME has posted a 2025 CME requirement for all actively licensed physicians, physician assistants, and anesthesiologist assistants on professional boundaries. This is a one-time two-hour CME...
 date: 2025-03-31
 author: Jonathan White
