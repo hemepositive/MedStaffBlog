@@ -23,7 +23,7 @@ TigerConnect is available for download from the Apple App Store (iOS) or Google 
 ### How do I log in?
 
 Your username is your transcriptionnumber.hhad.hhsys.org and your password is your Cerner login password.
-As an example, my login is 2106@hhad.hhsys.org.
+As an example, my login is 2106&#64;hhad.hhsys.org.
 If you're having trouble accessing your account, contact the IT Help Desk for assistance.
 
 ### What if I cannot login?
@@ -68,3 +68,10 @@ The “Sent” status indicates that a notification has been sent to the designa
 ### Who do I contact for support?
 
 For technical issues or questions about TigerConnect, contact the IT Help Desk at (256)265-7777. For clinical workflow questions, reach out Jonathan White.
+
+<style>
+a:not(.nav-link) {
+  text-decoration: none;
+  color: var(--color-secondary);
+}
+<style>
