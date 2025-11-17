@@ -2,7 +2,7 @@
 title: TigerConnect FAQ
 slug: tigerconnect-faq
 excerpt: Frequently asked questions about TigerConnect messaging platform at Huntsville Hospital.
-date: 2025-11-10
+date: 2025-11-17
 author: Jonathan White
 ---
 
@@ -30,7 +30,7 @@ If you're having trouble accessing your account, contact the IT Help Desk for as
 
 1. Make sure your username is correct and not prefixed with mailto: or other text.
 2. Try logging into the [TigerConnect: Messenger Webapp](https://login.tigerconnect.com) to test your username and password.
-3. If you're having trouble accessing your account or the mobile app, contact the IT Help Desk for assistance at (256)265-5777.
+3. If you're having trouble accessing your account or the mobile app, contact the IT Help Desk for assistance at (256)265-7777.
 
 ### Is TigerConnect secure?
 
@@ -52,14 +52,19 @@ Check your device notification settings and ensure TigerConnect has permission t
 
 The primary way a user can tell if they are messaging an unactivated TigerConnect account is by checking the message status. The message to an unactivated user will remain in the Sent status.
 
+### I sent a message... How do I know they got it?
+
+TigerConnect messages have four types of delivery confirmation:
+Failed to deliver = message could not be delivered
+Sent = message in route to the recipient
+Delivered = message delivered to the recipient's device
+Read = message read by the recipient
+In general, closed-loop communication is key to effective communication. If you do not get a Read receipt or a text acknowledgement from the person you messaged, please do not assume they got your message. Please find another way to contact the person.
+
 ### What are the message statuses?
 
 The “Sent” status indicates that a notification has been sent to the designated recipient, informing them that they have received a TigerConnect message. Following this, senders will see the status “Delivered” underneath the message. This means that the recipient has opened the TigerConnect app, and the message has been downloaded onto the server. Lastly, when recipients open the message or the existing correspondence, the message will be marked as “Read.” Each of these statuses enables TigerConnect users to understand how to proceed with tasks and projects appropriately based on the status of their message.
 
 ### Who do I contact for support?
 
-For technical issues or questions about TigerConnect, contact the IT Help Desk at (256)265-5777. For clinical workflow questions, reach out Jonathan White.
-
-### What happens to my messages?
-
-Messages are retained according to hospital policy and regulatory requirements. Do not delete messages that may be part of the medical record.
+For technical issues or questions about TigerConnect, contact the IT Help Desk at (256)265-7777. For clinical workflow questions, reach out Jonathan White.
