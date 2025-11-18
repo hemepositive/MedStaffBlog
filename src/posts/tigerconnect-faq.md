@@ -74,4 +74,4 @@ a:not(.nav-link) {
   text-decoration: none;
   color: var(--color-secondary);
 }
-<style>
+</style>
