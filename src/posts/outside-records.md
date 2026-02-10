@@ -1,14 +1,16 @@
 ---
 title: 'Outside Records: CommonWell Summary'
 slug: outside-records
-excerpt: When accessing "Outside Records" it will now link to CommonWell, a national record locator service that connects patient data from other EMRs into PowerChart. Learn how to access, enroll, and reconcile CommonWell data.
+excerpt: Obtaining medical records from an external hospital or clinic can be extremely helpful. While not everyone has such records, the following instructions outline how to acquire them for those who do.
 date: 2025-02-10
-author: HH Information Technology
+author: Jonathan WHite
 ---
 
-**Intended Audience: All Clinical Staff**
+Obtaining medical records from an external hospital or clinic can be extremely helpful. While not everyone has such records, the following instructions outline how to acquire them for those who do.
 
-When accessing "Outside Records" it will now link to CommonWell. CommonWell is a national record locator service, essentially it connects specific patient data from other Electronic Medical Records (EMRs) into the PowerChart system. CommonWell pulls from EMR sources across the country. This record information will be added to a new "Summary" tab on the "Outside Records" menu section. Records can be viewed and/or saved to the chart. Please note that information pulled from CommonWell is **NOT** a full medical record from another facility, but a summary that may include allergies, medications, procedures, immunizations, provider documentation, vitals, etc. Follow the steps below to learn how to access the CommonWell data.
+**These instructions are detailed, but knowing how to access the Outside Records page, refresh the records, and navigate through the available options will work for most users.**
+
+CommonWell is a national record locator service, essentially it connects specific patient data from other Electronic Medical Records (EMRs) into the PowerChart system. CommonWell pulls from EMR sources across the country. This record information will be added to a new "Summary" tab on the "Outside Records" menu section. Records can be viewed and/or saved to the chart. Please note that information pulled from CommonWell is **NOT** a full medical record from another facility, but a summary that may include allergies, medications, procedures, immunizations, provider documentation, vitals, etc. Follow the steps below to learn how to access the CommonWell data.
 
 ## Accessing Outside Records
 
