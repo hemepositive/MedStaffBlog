@@ -16,6 +16,10 @@ When accessing "Outside Records" it will now link to CommonWell. CommonWell is a
 
 ![Outside Records menu item](/images/outside-records/page1_img1.png)
 
+This will open the Outside Records M-Page
+
+![Outside Records M-Page](/images/outside-records/page1_MPage.png)
+
 2. The patient's CommonWell enrollment status will appear in the top right of the page.
 
 ![CommonWell Enrolled status](/images/outside-records/page1_img2.png)
