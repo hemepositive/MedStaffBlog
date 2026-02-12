@@ -1,16 +1,14 @@
 ---
-title: 'Outside Records: CommonWell Summary'
+title: 'Outside Records from CommonWell Summary'
 slug: outside-records
 excerpt: Obtaining medical records from an external hospital or clinic can be extremely helpful. While not everyone has such records, the following instructions outline how to acquire them for those who do.
 date: 2025-02-10
-author: Jonathan WHite
+author: Jonathan White
 ---
 
 Obtaining medical records from an external hospital or clinic can be extremely helpful. While not everyone has such records, the following instructions outline how to acquire them for those who do.
 
-**These instructions are detailed, but knowing how to access the Outside Records page, refresh the records, and navigate through the available options will work for most users.**
-
-CommonWell is a national record locator service, essentially it connects specific patient data from other Electronic Medical Records (EMRs) into the PowerChart system. CommonWell pulls from EMR sources across the country. This record information will be added to a new "Summary" tab on the "Outside Records" menu section. Records can be viewed and/or saved to the chart. Please note that information pulled from CommonWell is **NOT** a full medical record from another facility, but a summary that may include allergies, medications, procedures, immunizations, provider documentation, vitals, etc. Follow the steps below to learn how to access the CommonWell data.
+**Most people only need to understand the basics to access external records in the EHR. You may also notice the term "Commonwell" in these instructions. Commonwell is the health information exchange that our EHR uses to obtain documents from external facilities. If you have any questions about accessing outside records, please contact the IT Help Desk or me.**
 
 ## Accessing Outside Records
 
@@ -41,24 +39,6 @@ This will open the Outside Records M-Page
 4. The **"View Confirmed Sources"** page will open, and the document will be added in alphabetical order. Select the **"Close"** button when done.
 
 ![View Confirmed Sources list](/images/outside-records/page2_img1.jpeg)
-
-## Enrolling a Patient in CommonWell
-
-If it indicates that the patient is not enrolled in CommonWell, you can easily perform a manual enrollment from this screen:
-
-1. Select the **"CommonWell: Not Enabled"** link.
-
-![CommonWell Not Enabled link](/images/outside-records/page2_img2.png)
-
-2. Verify that the patient Full Name and information from PowerChart matches the patient shown in the search.
-3. If this matches, choose **"Link This Record"** link on the left side, and then click **"Close."**
-4. If there is a confirmed source found for this patient, it will then display it for you to see.
-
-![Link This Record screen](/images/outside-records/page2_img3.png)
-
-5. After enrolling the patient in CommonWell, click the button to cycle the query again.
-
-![Last query refresh button](/images/outside-records/page3_img1.png)
 
 ## Viewing Documents
 
