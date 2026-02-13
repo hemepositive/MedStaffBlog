@@ -2,7 +2,7 @@
 title: 'Outside Records from CommonWell Summary'
 slug: outside-records
 excerpt: Obtaining medical records from an external hospital or clinic can be extremely helpful. While not everyone has such records, the following instructions outline how to acquire them for those who do.
-date: 2025-02-10
+date: 2026-02-10
 author: Jonathan White
 ---
 
