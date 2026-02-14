@@ -1,5 +1,5 @@
 ---
-title: 'Joint Commission Survey Preparation: Top 5 Physician/APP Asked Topics'
+title: 'Joint Commission Survey Preparation: Top 5 Physician & APP Asked Topics'
 slug: joint-commission-survey-prep
 excerpt: Our Joint Commission survey is approaching in March. Every physician should be familiar with these five key topics that surveyors commonly focus on. Review the quick reference guide and be prepared.
 date: 2026-02-12
@@ -61,7 +61,7 @@ If a surveyor approaches you, remember to be open, honest, and professional. Kno
 
 **[Download the full Joint Commission Quick Reference Guide (PDF)](/files/JointCommissionQuickReference.pdf)** for a comprehensive review of all topics that may come up during the survey.
 
-If you have questions about survey preparation, contact the Quality Management Department at extension 52745.
+If you have questions about survey preparation, contact the Quality Management Department at extension 5-2745.
 
 <style>
 a:not(.nav-link) {
