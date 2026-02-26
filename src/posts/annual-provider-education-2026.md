@@ -6,7 +6,7 @@ date: 2026-02-23
 author: Jonathan White
 ---
 
-It's that time of year again! The **2026 Annual Provider Education** is now available and ready for your review. Each year, this education module brings together the key clinical, safety, and regulatory topics that support excellence in patient care across our organization.
+The **2026 Annual Provider Education** is now available and ready for your review. Each year, this education module brings together the key clinical, safety, and regulatory topics that support excellence in patient care across our organization.
 
 This year's education covers important updates and reminders that every physician and APP should be familiar with. Taking a few minutes to review these materials helps ensure we continue to deliver safe, high-quality care to the patients and communities we serve.
 
