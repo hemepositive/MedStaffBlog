@@ -1,0 +1,28 @@
+---
+interface Props {
+  src: string;
+  height?: string;
+}
+
+const { src, height = '600px' } = Astro.props;
+---
+
+<div class="pdf-viewer">
+  <iframe {src} title="PDF Document" />
+</div>
+
+<style define:vars={{ height }}>
+  .pdf-viewer {
+    width: 100%;
+    height: var(--height);
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    overflow: hidden;
+  }
+
+  iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+  }
+</style>
