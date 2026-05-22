@@ -57,6 +57,15 @@ author: Author Name
 ---
 ```
 
+### Embedding PDFs in Posts and Pages
+When embedding PDFs in iframes (posts or pages), **always append `#toolbar=0` to the PDF URL** to hide the download toolbar and prevent automatic download prompts:
+
+```html
+<div style="width: 100%; height: 600px; border: 1px solid #ccc; border-radius: 4px; overflow: hidden;">
+  <iframe src="/files/YourDocument.pdf#toolbar=0" width="100%" height="100%" style="border: none;"></iframe>
+</div>
+```
+
 ## File Structure Notes
 
 - `public/files/` contains PDF documents referenced in posts
