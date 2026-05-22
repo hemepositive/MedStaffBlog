@@ -28,8 +28,10 @@ The result? Even when your phone shows full "bars," your actual data speeds can 
 ### The Upgrade Plan
 
 We are systematically replacing the entire system from the ground up by installing certified PIM-rated cables and antennas, along with stronger 2-Watt remote boosters. This upgrade will eliminate the electronic noise leaks that choke our system, allowing carriers to safely open up full, unrestricted data bandwidth to our devices.
-Zero-Downtime Migration: We are building a temporary "extra sector" network parallel to the old one. As each zone is completed, we seamlessly migrate users without disrupting active cellular coverage.
-Clinical Areas First: We are prioritizing our highest-acuity zones. Work begins immediately on the entire main first floor (from the cafeteria to the ORs), including the entire surgery area. The next major phase will tackle the Emergency Department, followed by the patient towers.
+
+- **Zero-Downtime Migration:** We are building a temporary "extra sector" network parallel to the old one. As each zone is completed, we seamlessly migrate users without disrupting active cellular coverage.
+- **Clinical Areas First:** We are prioritizing our highest-acuity zones. **_Work has begun on the entire first floor of Main, including the cafeteria and the entire OR area. Improved signals are expected by mid-June._** The next major phase will tackle the Emergency Department, followed by the patient towers.
+
 This critical infrastructure cure will ensure the fast, reliable 5G connectivity required for a modern clinical workflow. I appreciate your patience as we complete these essential upgrades.
 
 ### The Fix at a Glance
