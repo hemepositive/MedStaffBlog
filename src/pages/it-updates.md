@@ -46,11 +46,55 @@ This critical infrastructure cure will ensure the fast, reliable 5G connectivity
 
 A new **Medication Reconciliation Status** column has been added to the Provider Handoff. This update helps ensure timely and prompt tracking of medication history completion to support efficient admission reconciliation of the patient's home medications and improve patient safety.
 
-<div style="width: 100%; height: 600px; border: 1px solid #ccc; border-radius: 4px; overflow: hidden;">
-  <iframe src="/files/MedicationReconciliationStatusColumn.pdf#toolbar=0" width="100%" height="100%" style="border: none;"></iframe>
-</div>
+<object data="/files/MedicationReconciliationStatusColumn.pdf" type="application/pdf" style="width: 100%; height: 600px; border: 1px solid #ccc; border-radius: 4px;"></object>
 
 ---
+
+<h3 id="dragon-toolbar-removal">2026-06 Dragon Medical One: Toolbar Icon Removal</h3>
+
+**Date:** June 1, 2026
+
+### Critical Dragon Toolbar Launch Issue Impacting Clinical Documentation Workflow.
+
+We have identified a significant issue when Dragon Medical One is launched from the Dragon icon within the PowerChart toolbar. When using a handheld microphone, all dictation is directed into the Dragon Dictation Box instead of directly into PowerChart documentation fields.
+
+This causes providers to manually move dictated text into the appropriate note sections, resulting in:
+
+- Major workflow disruptions
+- Delays in documentation completion
+- Delays in patient care rounds
+- Increased provider frustration
+- Increased risk of documentation errors or omissions
+
+Exiting and relaunching Dragon from the PowerChart toolbar does not resolve the issue.
+
+### Resolution
+
+Oracle has acknowledged this issue and recommends launching Dragon only from:
+
+- The desktop PowerChart with Dragon icon, or
+- The 1Chart storefront login page
+
+**We will be removing the Dragon icon from the PowerChart and First Net toolbars** to prevent use of the unsupported launch method and reduce ongoing provider workflow disruption.
+
+### Recommended Launch Methods
+
+Please use the icons below to launch Dragon along with PowerChart or FirstNet:
+
+<div style="display: flex; justify-content: center; gap: 2em; margin: 2em 0; flex-wrap: wrap;">
+ <div style="text-align: center;">
+    <img src="/images/dragon-icon-changes/dragon-toolbar.png" alt="Dragon Icon in Toolbar" style="max-width: 150px; margin-bottom: 1em;" />
+    <p><strong>Removing the above Dragon Icon<br />P714</strong></p>
+  </div>
+  <div style="text-align: center;">
+    <img src="/images/dragon-icon-changes/dragon-icon-pc.png" alt="PowerChart With Dragon P714" style="max-width: 150px; margin-bottom: 1em;" />
+    <p><strong>PowerChart With Dragon<br />P714</strong></p>
+  </div>
+  <div style="text-align: center;">
+    <img src="/images/dragon-icon-changes/dragon-icon-fn.png" alt="FirstNet With Dragon P714" style="max-width: 150px; margin-bottom: 1em;" />
+    <p><strong>FirstNet With Dragon<br />P714</strong></p>
+  </div>
+</div>
 
 </div>
 
