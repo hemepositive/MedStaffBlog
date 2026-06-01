@@ -77,22 +77,24 @@ Oracle has acknowledged this issue and recommends launching Dragon only from:
 
 **We will be removing the Dragon icon from the PowerChart and First Net toolbars** to prevent use of the unsupported launch method and reduce ongoing provider workflow disruption.
 
+<div style="display: flex; justify-content: center; gap: 2em; margin: 2em 0; flex-wrap: wrap;">
+ <div style="text-align: center;">
+    <img src="/images/dragon-icon-changes/dragon-toolbar.png" alt="Dragon Icon in Toolbar" style="max-width: 500px; margin-bottom: 1em;" />
+  </div>
+  </div>
+
 ### Recommended Launch Methods
 
 Please use the icons below to launch Dragon along with PowerChart or FirstNet:
 
 <div style="display: flex; justify-content: center; gap: 2em; margin: 2em 0; flex-wrap: wrap;">
- <div style="text-align: center;">
-    <img src="/images/dragon-icon-changes/dragon-toolbar.png" alt="Dragon Icon in Toolbar" style="max-width: 150px; margin-bottom: 1em;" />
-    <p><strong>Removing the above Dragon Icon<br />P714</strong></p>
-  </div>
   <div style="text-align: center;">
     <img src="/images/dragon-icon-changes/dragon-icon-pc.png" alt="PowerChart With Dragon P714" style="max-width: 150px; margin-bottom: 1em;" />
-    <p><strong>PowerChart With Dragon<br />P714</strong></p>
+    <p><strong>PowerChart With Dragon</strong></p>
   </div>
   <div style="text-align: center;">
     <img src="/images/dragon-icon-changes/dragon-icon-fn.png" alt="FirstNet With Dragon P714" style="max-width: 150px; margin-bottom: 1em;" />
-    <p><strong>FirstNet With Dragon<br />P714</strong></p>
+    <p><strong>FirstNet With Dragon</strong></p>
   </div>
 </div>
 
