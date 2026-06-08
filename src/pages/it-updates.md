@@ -59,8 +59,6 @@ Please use the icons below to launch Dragon along with PowerChart or FirstNet:
   </div>
 </div>
 
----
-
 ## New Tools
 
 <h3 id="medication-reconciliation-status">2026-05 Provider Handoff: Medication Reconciliation Status Column</h3>
