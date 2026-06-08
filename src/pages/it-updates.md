@@ -11,45 +11,6 @@ title: 'IT Updates'
 
 ## System Changes
 
-<h3 id="cell-service-update">2026-05 Cellular Service Update</h3>
-
-**Date:** May 20, 2026
-
-### Our 6-Month Cellular Infrastructure Upgrade
-
-We are all familiar with the frustration of dropped calls and poor cell signals in the hospital. Communication bottlenecks directly affect care efficiency.
-To address this, our IT staff and specialized contractors have launched a comprehensive 6-month upgrade to our hospital's Distributed Antenna System (DAS)—the internal network that amplifies and distributes cellular signals throughout our facilities.
-
-### Why Is Our Signal Weak?
-
-Parts of our current cellular infrastructure date back to 2003. This legacy equipment creates massive electronic "noise" and feedback. To protect their wider networks, major cellular carriers (like Verizon and AT&T) are forced to reduce the data bandwidth they send to our building.
-The result? Even when your phone shows full "bars," your actual data speeds can be incredibly slow.
-
-### The Upgrade Plan
-
-We are systematically replacing the entire system from the ground up by installing certified PIM-rated cables and antennas, along with stronger 2-Watt remote boosters. This upgrade will eliminate the electronic noise leaks that choke our system, allowing carriers to safely open up full, unrestricted data bandwidth to our devices.
-
-- **Zero-Downtime Migration:** We are building a temporary "extra sector" network parallel to the old one. As each zone is completed, we seamlessly migrate users without disrupting active cellular coverage.
-- **Clinical Areas First:** We are prioritizing our highest-acuity zones. **_Work has begun on the entire first floor of Main, including the cafeteria and the entire OR area. Improved signals are expected by mid-June._** The next major phase will tackle the Emergency Department, followed by the patient towers.
-
-This critical infrastructure cure will ensure the fast, reliable 5G connectivity required for a modern clinical workflow. I appreciate your patience as we complete these essential upgrades.
-
-### The Fix at a Glance
-
-<img src="/images/DAS-image.jpeg" alt="DAS System Upgrade" style="max-width: 600px; margin: 1.5em auto; display: block;" />
-
-## New Tools
-
-<h3 id="medication-reconciliation-status">2026-05 Provider Handoff: Medication Reconciliation Status Column</h3>
-
-**Date:** May 22, 2026
-
-A new **Medication Reconciliation Status** column has been added to the Provider Handoff. This update helps ensure timely and prompt tracking of medication history completion to support efficient admission reconciliation of the patient's home medications and improve patient safety.
-
-<object data="/files/MedicationReconciliationStatusColumn.pdf" type="application/pdf" style="width: 100%; height: 600px; border: 1px solid #ccc; border-radius: 4px;"></object>
-
----
-
 <h3 id="dragon-toolbar-removal">2026-06 Dragon Medical One: Toolbar Icon Removal</h3>
 
 **Date:** June 1, 2026
@@ -97,6 +58,49 @@ Please use the icons below to launch Dragon along with PowerChart or FirstNet:
     <p><strong>FirstNet With Dragon</strong></p>
   </div>
 </div>
+
+---
+
+## New Tools
+
+<h3 id="medication-reconciliation-status">2026-05 Provider Handoff: Medication Reconciliation Status Column</h3>
+
+**Date:** May 22, 2026
+
+A new **Medication Reconciliation Status** column has been added to the Provider Handoff. This update helps ensure timely and prompt tracking of medication history completion to support efficient admission reconciliation of the patient's home medications and improve patient safety.
+
+<div style="width: 100%; height: 600px; border: 1px solid #ccc; border-radius: 4px; overflow: hidden;">
+  <iframe src="/files/MedicationReconciliationStatusColumn.pdf#toolbar=0" width="100%" height="100%" style="border: none;"></iframe>
+</div>
+
+---
+
+<h3 id="cell-service-update">2026-05 Cellular Service Update</h3>
+
+**Date:** May 20, 2026
+
+### Our 6-Month Cellular Infrastructure Upgrade
+
+We are all familiar with the frustration of dropped calls and poor cell signals in the hospital. Communication bottlenecks directly affect care efficiency.
+To address this, our IT staff and specialized contractors have launched a comprehensive 6-month upgrade to our hospital's Distributed Antenna System (DAS)—the internal network that amplifies and distributes cellular signals throughout our facilities.
+
+### Why Is Our Signal Weak?
+
+Parts of our current cellular infrastructure date back to 2003. This legacy equipment creates massive electronic "noise" and feedback. To protect their wider networks, major cellular carriers (like Verizon and AT&T) are forced to reduce the data bandwidth they send to our building.
+The result? Even when your phone shows full "bars," your actual data speeds can be incredibly slow.
+
+### The Upgrade Plan
+
+We are systematically replacing the entire system from the ground up by installing certified PIM-rated cables and antennas, along with stronger 2-Watt remote boosters. This upgrade will eliminate the electronic noise leaks that choke our system, allowing carriers to safely open up full, unrestricted data bandwidth to our devices.
+
+- **Zero-Downtime Migration:** We are building a temporary "extra sector" network parallel to the old one. As each zone is completed, we seamlessly migrate users without disrupting active cellular coverage.
+- **Clinical Areas First:** We are prioritizing our highest-acuity zones. **_Work has begun on the entire first floor of Main, including the cafeteria and the entire OR area. Improved signals are expected by mid-June._** The next major phase will tackle the Emergency Department, followed by the patient towers.
+
+This critical infrastructure cure will ensure the fast, reliable 5G connectivity required for a modern clinical workflow. I appreciate your patience as we complete these essential upgrades.
+
+### The Fix at a Glance
+
+<img src="/images/DAS-image.jpeg" alt="DAS System Upgrade" style="max-width: 600px; margin: 1.5em auto; display: block;" />
 
 </div>
 
