@@ -1,0 +1,106 @@
+<dialog id="search-dialog" aria-label="Search">
+  <div class="search-box">
+    <div id="pagefind-container">
+      <p class="search-loading">Loading search…</p>
+    </div>
+    <p class="search-tip">Press <kbd>Esc</kbd> to close</p>
+  </div>
+</dialog>
+
+<style>
+  dialog {
+    width: min(640px, calc(100vw - 32px));
+    margin: 10vh auto auto;
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    background: var(--surface-raised);
+    color: var(--body);
+    padding: 0;
+    box-shadow: 0 20px 60px rgba(15, 23, 42, 0.25);
+  }
+  dialog::backdrop {
+    background: rgba(15, 23, 42, 0.4);
+    backdrop-filter: blur(2px);
+  }
+  .search-box {
+    padding: 20px 22px 14px;
+  }
+  .search-tip {
+    margin-top: 12px;
+    font-size: 12px;
+    color: var(--muted);
+    text-align: right;
+  }
+  .search-tip kbd {
+    border: 1px solid var(--line);
+    border-radius: 4px;
+    padding: 0 5px;
+    font-family: inherit;
+  }
+  .search-loading {
+    color: var(--muted);
+    font-size: 14px;
+  }
+  #pagefind-container {
+    --pagefind-ui-primary: var(--brand-ink);
+    --pagefind-ui-text: var(--ink);
+    --pagefind-ui-background: var(--surface-raised);
+    --pagefind-ui-border: var(--line);
+    --pagefind-ui-tag: var(--surface-sunken);
+    --pagefind-ui-border-width: 1px;
+    --pagefind-ui-border-radius: 10px;
+    --pagefind-ui-font: inherit;
+  }
+</style>
+
+<script>
+  const dialog = document.getElementById('search-dialog') as HTMLDialogElement | null;
+  const trigger = document.getElementById('search-open');
+  let initialized = false;
+
+  function initPagefind() {
+    if (initialized) return;
+    initialized = true;
+    const container = document.getElementById('pagefind-container');
+    if (!container) return;
+
+    const css = document.createElement('link');
+    css.rel = 'stylesheet';
+    css.href = '/pagefind/pagefind-ui.css';
+    document.head.appendChild(css);
+
+    const script = document.createElement('script');
+    script.src = '/pagefind/pagefind-ui.js';
+    script.onload = () => {
+      container.innerHTML = '';
+      // @ts-expect-error PagefindUI is a global provided by the script above
+      new PagefindUI({ element: '#pagefind-container', showSubResults: true, showImages: false });
+      dialog?.querySelector<HTMLInputElement>('input')?.focus();
+    };
+    script.onerror = () => {
+      // Pagefind indexes the built site; it isn't available under `astro dev`.
+      container.innerHTML =
+        '<p class="search-loading">Search is available on the published site (run a full build to index content).</p>';
+    };
+    document.body.appendChild(script);
+  }
+
+  function openSearch() {
+    if (!dialog) return;
+    dialog.showModal();
+    initPagefind();
+    dialog.querySelector<HTMLInputElement>('input')?.focus();
+  }
+
+  trigger?.addEventListener('click', openSearch);
+  window.addEventListener('keydown', (e) => {
+    if ((e.metaKey || e.ctrlKey) && e.key === 'k') {
+      e.preventDefault();
+      dialog?.open ? dialog.close() : openSearch();
+    }
+  });
+  // Close when clicking the backdrop.
+  dialog?.addEventListener('click', (e) => {
+    if (e.target === dialog) dialog.close();
+  });
+</script>

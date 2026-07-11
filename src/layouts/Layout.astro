@@ -1,6 +1,7 @@
 ---
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
+import SearchDialog from '../components/SearchDialog.astro';
 import '@fontsource/ibm-plex-sans/400.css';
 import '@fontsource/ibm-plex-sans/500.css';
 import '@fontsource/ibm-plex-sans/600.css';
@@ -37,5 +38,6 @@ const { title = 'Medical Staff News', description = 'News and updates for the Hu
       <slot />
     </main>
     <Footer />
+    <SearchDialog />
   </body>
 </html>

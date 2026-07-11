@@ -3,7 +3,12 @@
     "allow": [
       "Bash(git pull *)",
       "Bash(tail -30 ~/.bashrc 2>&1)",
-      "Read(//Users/uxorious/**)"
+      "Read(//Users/uxorious/**)",
+      "Skill(artifact-design)",
+      "Skill(artifact-design:*)",
+      "WebFetch(domain:medicalstaffnews.com)",
+      "Bash(rm /Users/uxorious/hh_newsletter/MedStaffBlog/src/pages/it-updates.md)",
+      "Bash(npm run *)"
     ]
   }
 }
