@@ -22,9 +22,8 @@ const posts = defineCollection({
     urgency: z.enum(['critical', 'warning', 'info']).default('info'),
     // When the change takes effect for clinicians (shown on cards/articles).
     effectiveDate: z.coerce.date().optional(),
-    // Until this date the post is eligible for the attention zone / pinned
-    // banner. Defaults to 6 weeks after effectiveDate (or date) — see src/lib/posts.ts.
-    expires: z.coerce.date().optional(),
+    // Attention/pinned status never expires by date; an editor clears it by
+    // setting urgency back to 'info' or removing pinned. See src/lib/posts.ts.
     pinned: z.boolean().default(false),
   }),
 });

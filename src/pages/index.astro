@@ -5,7 +5,7 @@ import StreamList from '../components/StreamList.astro';
 import {
   getPostsNewestFirst,
   byCategory,
-  isInAttentionZone,
+  isAttention,
   isPinned,
   postUrl,
   formatMonth,
@@ -13,7 +13,9 @@ import {
 
 const posts = await getPostsNewestFirst();
 const pinned = posts.filter((p) => isPinned(p));
-const attention = posts.filter((p) => isInAttentionZone(p)).slice(0, 4);
+// Newest 4 flagged posts get cards; older flagged posts keep their
+// "Attention" chip in the streams below (flags never expire by date).
+const attention = posts.filter((p) => isAttention(p)).slice(0, 4);
 const announcements = byCategory(posts, 'announcements').slice(0, 3);
 ---
 

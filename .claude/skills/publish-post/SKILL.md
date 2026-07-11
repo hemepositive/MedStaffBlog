@@ -30,6 +30,7 @@ work yourself and confirm only editorial decisions (category, urgency, wording).
 - Fill frontmatter (see template comments). Rules:
   - `category`: `it-ehr` (EHR/systems/downtime), `clinical` (order sets, workflows, policies, patient safety), `education` (CME, training, guidelines), `announcements` (events, people, general news).
   - `urgency: warning` only if clinicians must act or their workflow changes; `critical` + `pinned: true` only for active/imminent downtimes. Default is `info` (omit the field).
+  - Attention flags and pins **never expire on their own**. When asked to publish, also ask whether any currently flagged/pinned posts are settled and should be demoted (set `urgency: info` / remove `pinned`).
   - `effectiveDate` when the change has a go-live date.
   - Propose category and urgency to the requester and confirm before publishing.
 - Images: plain markdown `![meaningful alt text](/images/<slug>/name.png)` — never `<div style=...>` wrappers. Images are auto-styled as figures.

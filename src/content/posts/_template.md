@@ -7,10 +7,11 @@ date: 2026-01-15 # publish date (displayed month-level, e.g. "January 2026")
 author: Author Name or Department
 category: it-ehr # one of: it-ehr | clinical | education | announcements
 # --- optional fields below; delete any you don't need ---
-# urgency: warning        # warning|critical puts the post in the homepage "Needs your attention" zone
+# urgency: warning        # warning|critical flags the post as "Needs your attention"; the flag
+#                         # never expires — set urgency back to info when the change is settled
 # effectiveDate: 2026-02-01 # when the change takes effect (shown day-level on cards and the article)
-# expires: 2026-03-01     # when to drop out of the attention zone (default: 6 weeks after effectiveDate/date)
-# pinned: true            # show as a red notice banner at the very top of the homepage (downtimes only)
+# pinned: true            # red notice banner at the very top of the homepage (downtimes only);
+#                         # remove it when the event is over — it does not clear itself
 ---
 
 Opening paragraph: the single most important thing, in plain language.

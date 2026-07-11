@@ -2,7 +2,7 @@
 import Layout from '../layouts/Layout.astro';
 import Chip from './Chip.astro';
 import { CATEGORIES, type Category } from '../content.config';
-import { getPostsNewestFirst, byCategory, postUrl, formatMonth, isInAttentionZone } from '../lib/posts';
+import { getPostsNewestFirst, byCategory, postUrl, formatMonth, isAttention } from '../lib/posts';
 
 export interface Props {
   category: Category;
@@ -24,7 +24,7 @@ const posts = byCategory(await getPostsNewestFirst(), category);
         <li>
           <div class="when">
             <time datetime={post.data.date.toISOString().slice(0, 10)}>{formatMonth(post.data.date)}</time>
-            {isInAttentionZone(post) && <Chip variant={post.data.urgency} label="Attention" />}
+            {isAttention(post) && <Chip variant={post.data.urgency} label="Attention" />}
           </div>
           <div class="what">
             <a href={postUrl(post)}>{post.data.title}</a>

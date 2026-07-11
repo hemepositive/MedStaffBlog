@@ -3,8 +3,6 @@ import type { Category } from '../content.config';
 
 export type Post = CollectionEntry<'posts'>;
 
-const SIX_WEEKS_MS = 6 * 7 * 24 * 60 * 60 * 1000;
-
 /** URL path segment for a post (legacy posts carry an explicit slug). */
 export function postSlug(post: Post): string {
   return post.data.slug ?? post.id;
@@ -14,19 +12,19 @@ export function postUrl(post: Post): string {
   return `/${postSlug(post)}`;
 }
 
-/** Date a post stops being eligible for the attention zone / pinned banner. */
-export function attentionCutoff(post: Post): Date {
-  if (post.data.expires) return post.data.expires;
-  const base = post.data.effectiveDate ?? post.data.date;
-  return new Date(base.getTime() + SIX_WEEKS_MS);
+/**
+ * Attention flags never expire by date — many readers visit infrequently.
+ * A post stays flagged until an editor sets its urgency back to 'info'.
+ * The homepage caps the attention *cards* at the newest few; older flagged
+ * posts keep their "Attention" chip in streams and category listings.
+ */
+export function isAttention(post: Post): boolean {
+  return post.data.urgency !== 'info';
 }
 
-export function isInAttentionZone(post: Post, now = new Date()): boolean {
-  return post.data.urgency !== 'info' && now < attentionCutoff(post);
-}
-
-export function isPinned(post: Post, now = new Date()): boolean {
-  return post.data.pinned && now < attentionCutoff(post);
+/** Pinned banner shows until an editor removes `pinned: true`. */
+export function isPinned(post: Post): boolean {
+  return post.data.pinned;
 }
 
 export async function getPostsNewestFirst(): Promise<Post[]> {

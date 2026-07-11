@@ -1,6 +1,6 @@
 ---
 import Chip from './Chip.astro';
-import { postUrl, formatMonth, isInAttentionZone, type Post } from '../lib/posts';
+import { postUrl, formatMonth, isAttention, type Post } from '../lib/posts';
 
 export interface Props {
   title: string;
@@ -22,7 +22,7 @@ const shown = posts.slice(0, limit);
         <a href={postUrl(post)}>{post.data.title}</a>
         <div class="sub">
           <time datetime={post.data.date.toISOString().slice(0, 10)}>{formatMonth(post.data.date)}</time>
-          {isInAttentionZone(post) && <Chip variant={post.data.urgency} label="Attention" />}
+          {isAttention(post) && <Chip variant={post.data.urgency} label="Attention" />}
         </div>
       </li>
     ))}

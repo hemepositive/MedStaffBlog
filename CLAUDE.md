@@ -24,9 +24,9 @@ There are no lint or test scripts. `npm run build` is the validation step — th
 Quick reference:
 
 - Posts live in `src/content/posts/*.md`. Copy `_template.md` (files starting with `_` are ignored by the build). `vte-prophylaxis-gi-surgery.md` is the exemplary post — match its structure.
-- Frontmatter: `title`, `excerpt`, `date`, `author`, `category` required; `urgency`, `effectiveDate`, `expires`, `pinned`, `slug` optional. Schema: `src/content.config.ts`.
+- Frontmatter: `title`, `excerpt`, `date`, `author`, `category` required; `urgency`, `effectiveDate`, `pinned`, `slug` optional. Schema: `src/content.config.ts`.
 - Categories: `it-ehr` · `clinical` · `education` · `announcements`.
-- `urgency: warning|critical` puts a post in the homepage "Needs your attention" zone until `expires` (default: 6 weeks after `effectiveDate`/`date`). `pinned: true` shows a red banner at the top of the homepage — active downtimes only.
+- `urgency: warning|critical` flags a post as "Needs your attention". **Flags never expire by date** (readers may visit months apart): the newest 4 flagged posts get homepage cards, and every flagged post keeps its Attention chip in streams/listings until an editor sets `urgency` back to `info`. `pinned: true` shows a red banner at the top of the homepage — active downtimes only — and must be removed manually when the event is over.
 - Images: plain markdown `![alt](/images/<post-slug>/file.png)`; they render as styled figures automatically. Never wrap images in styled HTML.
 - Callouts: `<div class="key-message">` and `<div class="takeaway">` (blank line inside the div so markdown renders).
 - **No PDF embeds/iframes.** Extract PDF content into the post body; a plain link to `public/files/` may supplement it.
@@ -35,7 +35,7 @@ Quick reference:
 ## Architecture
 
 - `src/content.config.ts` — collection schema + `CATEGORIES` labels.
-- `src/lib/posts.ts` — shared queries and rules: `getPostsNewestFirst`, `byCategory`, `isInAttentionZone`, `isPinned`, `postUrl`, month/day formatting. Change attention-zone behavior here, nowhere else.
+- `src/lib/posts.ts` — shared queries and rules: `getPostsNewestFirst`, `byCategory`, `isAttention`, `isPinned`, `postUrl`, month/day formatting. Change attention behavior here, nowhere else.
 - `src/layouts/Layout.astro` — head, fonts (self-hosted IBM Plex Sans), theme bootstrap, Header/Footer/SearchDialog. `PageLayout.astro` wraps markdown pages in `.prose`.
 - `src/pages/index.astro` — pinned notice → attention zone → three category streams → announcements row.
 - `src/pages/[slug].astro` — article template. `it-updates.astro` (legacy URL for the it-ehr category), `clinical.astro`, `education.astro`, `announcements.astro` — thin wrappers around `components/CategoryIndex.astro`.
