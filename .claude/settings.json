@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(git pull *)",
+      "Bash(tail -30 ~/.bashrc 2>&1)",
+      "Read(//Users/uxorious/**)"
+    ]
+  }
+}

@@ -2,10 +2,10 @@
 import Layout from '../layouts/Layout.astro';
 import Showcase from '../components/Showcase.astro';
 import Card from '../components/Card.astro';
+import { getCollection } from 'astro:content';
 
-const posts = await Astro.glob('../posts/*.md');
-// const posts = await Astro.glob('../HH-MS-News/posts/*.md');
-posts.sort((a, b) => Date.parse(b.frontmatter.date) - Date.parse(a.frontmatter.date));
+const posts = await getCollection('posts');
+posts.sort((a, b) => Date.parse(b.data.date) - Date.parse(a.data.date));
 
 ---
 
@@ -15,12 +15,12 @@ posts.sort((a, b) => Date.parse(b.frontmatter.date) - Date.parse(a.frontmatter.d
     <div class="container">
       {posts.map(post => (
         <Card>
-          <h3>{post.frontmatter.title}</h3>
+          <h3>{post.data.title}</h3>
           <div>
-          Written by <strong>{post.frontmatter.author} </strong> on {new Date(post.frontmatter.date).toLocaleDateString()}
+          Written by <strong>{post.data.author} </strong> on {new Date(post.data.date).toLocaleDateString()}
         </div>
-          <p>{post.frontmatter.excerpt}</p>  
-          <a class="more-btn" href={`/${post.frontmatter.slug}`}>Read More</a>
+          <p>{post.data.excerpt}</p>
+          <a class="more-btn" href={`/${post.data.slug}`}>Read More</a>
         </Card>
       ))}
     </div>

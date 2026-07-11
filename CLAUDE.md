@@ -4,14 +4,14 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-This is an Astro-based medical staff newsletter website for Hannibal Health (HH Med Staff News). The site displays medical staff news articles and updates for healthcare professionals. It's built using Astro v1.0.8 with React integration and is deployed to GitHub Pages at `https://hemepositive.github.io`.
+This is an Astro-based medical staff newsletter website for Hannibal Health (HH Med Staff News). The site displays medical staff news articles and updates for healthcare professionals. It's built using Astro v7 with React integration and is deployed to GitHub Pages at `https://hemepositive.github.io`.
 
 ## Development Commands
 
 | Command | Action |
 |---------|--------|
 | `npm install` | Installs dependencies |
-| `npm run dev` | Starts local dev server at `localhost:3000` |
+| `npm run dev` | Starts local dev server at `localhost:4321` |
 | `npm run build` | Build production site to `./dist/` |
 | `npm run preview` | Preview build locally before deploying |
 | `npm run astro ...` | Run CLI commands like `astro add`, `astro preview` |
