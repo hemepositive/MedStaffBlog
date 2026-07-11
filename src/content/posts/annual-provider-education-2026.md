@@ -4,6 +4,7 @@ slug: annual-provider-education-2026
 excerpt: It's time to complete your 2026 Annual Provider Education. This year's module covers essential topics to support safe, high-quality patient care. Access the education materials and complete your training today.
 date: 2026-02-23
 author: Jonathan White
+category: education
 ---
 
 The **2026 Annual Provider Education** is now available and ready for your review. Each year, this education module brings together the key clinical, safety, and regulatory topics that support excellence in patient care across our organization.

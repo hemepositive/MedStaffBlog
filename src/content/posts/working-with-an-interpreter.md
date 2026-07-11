@@ -4,6 +4,7 @@ slug: working-with-an-interpreter
 excerpt: Our HH Language Services include local interpreters and Martti to facilitate communication with non-English speakers anytime. Clear communication is key to patient outcomes and satisfaction. Here are some tips to make the most of working with an interpreter.
 date: 2025-05-22
 author: Jonathan White
+category: education
 ---
 
 <div class="image-container">

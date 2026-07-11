@@ -4,6 +4,7 @@ slug: tigerconnect-faq
 excerpt: Frequently asked questions about TigerConnect messaging platform at Huntsville Hospital.
 date: 2025-11-17
 author: Jonathan White
+category: it-ehr
 ---
 
 ## TigerConnect Frequently Asked Questions

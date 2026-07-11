@@ -4,6 +4,7 @@ slug: nursing-update-april-2023
 excerpt: Coming soon we will have virtual care nurses and safety companions as a part of the care team on 7N/7NE/7NW at HH Main. Virtual care has shown to reduce safety events, ...
 date: 2023-04-19
 author: Arin Zapf, MSN, RN - Chief Nursing Officer
+category: announcements
 ---
 
 ### Care Team Expansion – Virtual Care Nurses

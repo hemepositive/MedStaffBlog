@@ -4,6 +4,7 @@ slug: local-PDMP-training
 excerpt: Auburn University is hosting a two hour training on the UAB Huntsville building on September 18th. The training focuses on the Physician Drug Monitoring Program (PDMP)...
 date: 2023-08-16
 author: Jonathan White
+category: education
 ---
 
 Auburn University is hosting a two hour training on the UAB Huntsville building on September 18th. The training focuses on the Physician Drug Monitoring Program (PDMP). The presentation includes information listed on the ALBME requirements for the two years Alabama Controlled Substances Certificate (ACSC).

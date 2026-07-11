@@ -4,6 +4,7 @@ slug: med-staff-growth-2022
 excerpt: The Huntsville Hospital Medical staff grew in 2022.
 date: 2023-02-06
 author: Megan Leach
+category: announcements
 ---
 
 ### Medical Staff Changes in 2022

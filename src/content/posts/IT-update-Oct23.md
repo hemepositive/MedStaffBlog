@@ -4,6 +4,7 @@ slug: IT-update-Oct23
 excerpt: Here are several more IT updates inlcuding how to access our 1Chart/Cerner remotely, an upcoming change to sepsis detection software, adding images to 1Chart/Cerner, Dragon Mics, and more.
 date: 2023-10-27
 author: Jonathan White
+category: it-ehr
 ---
 
 ### Remote Access

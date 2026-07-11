@@ -4,6 +4,7 @@ slug: CME-Opportunities-2025
 excerpt: HH has many upcoming educational opportunities for physicians, APPs, nurses, pharmacists, and more. Some of these conferences would benefit multiple members of your team. More information on each conference is available at the link at the bottom of the page....
 date: 2025-01-07
 author: Jonathan White
+category: education
 ---
 
 ### Upcoming Conferences

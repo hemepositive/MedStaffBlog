@@ -4,6 +4,7 @@ slug: CDC-alert-US-gel-post
 excerpt: The CDC is assisting with an ongoing multistate investigation involving the use of non-sterile ultrasound gel for ultrasound-guided percutaneous procedures (procedures involving skin or tissue puncture). Product testing identified...
 date: 2025-05-22
 author: Jonathan White
+category: clinical
 ---
 
 ### <div class="red">Alert: Use Only Sterile Ultrasound Gel for Percutaneous Procedures</div>

@@ -4,6 +4,7 @@ slug: cme-from-uptodate
 excerpt: Huntsville Hospital provides access to Up To Date, which allows providers to get free CME if they use a personal account on a computer on the HH network. Since each search is considered point-of-care,
 date: 2023-02-11
 author: Jonathan White
+category: education
 ---
 
 ### Want the easiest free CME ever?

@@ -4,6 +4,7 @@ slug: cellular-service-upgrade-update-1
 excerpt: Latest update on the cellular service upgrade project at the Huntsville Hospital Campus.
 date: 2025-09-18
 author: Jon Smith, IT Technical Director
+category: it-ehr
 ---
 
 We're pleased to provide an update on the cellular service upgrade project at Huntsville Hospital.

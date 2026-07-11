@@ -4,6 +4,7 @@ slug: CAUTI-prevention
 excerpt: Catheter-associated urinary tract infections (CAUTIs) are a significant problem. These infections are substantial sources of patient morbidity, extended hospital stays, and increased healthcare costs to our hospital and our patients...
 date: 2024-09-16
 author: Jonathan White
+category: clinical
 ---
 
 Catheter-associated urinary tract infections (CAUTIs) are a significant problem. These infections are substantial sources of patient morbidity, extended hospital stays, and increased healthcare costs to our hospital and our patients. We recently audited Foley catheters and found that many were not placed for acceptable reasons. Our quality department, nursing, and others are focusing on preventing CAUTIs. We ask physicians to participate in these efforts as our orders dictate when Foleys are placed and discontinued.

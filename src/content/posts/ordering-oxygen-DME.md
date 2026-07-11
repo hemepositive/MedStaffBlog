@@ -4,6 +4,7 @@ slug: ordering-oxygen-DME
 excerpt: IT added several options to the DME Oxygen Orders to improve home oxygen ordering. As a default, patients on home oxygen generally receive large E tanks. Most patients request small B tanks or...
 date: 2025-03-31
 author: Jonathan White
+category: clinical
 ---
 
 IT added several options to the DME Oxygen Orders to improve home oxygen ordering. As a default, patients on home oxygen generally receive large E tanks. Most patients request small B tanks or, optimally, a Portable Oxygen Concentrator, resulting in more ease of portable use. DME companies cannot provide their request without a matching physician order. Patients have expressed frustration as they don't know how to communicate this to their physician, and it often takes them some time for the change.

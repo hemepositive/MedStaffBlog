@@ -4,6 +4,7 @@ slug: IT-update-Sept23
 excerpt: Next week, Dragon will receive a significant upgrade. There are changes to the Dragon bar and other enhancements. Below is a link...
 date: 2023-09-14
 author: Jonathan White
+category: it-ehr
 ---
 
 ### Dragon Upgrade

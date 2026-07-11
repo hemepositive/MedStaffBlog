@@ -4,6 +4,7 @@ slug: nursing-update-december-2023
 excerpt: Ending our year good note, nursing turnover is down and we are working on several projects for stabilization and growth...
 date: 2023-12-28
 author: Arin Zapf, MSN, RN - Chief Nursing Officer
+category: announcements
 ---
 
 We are ending our year on a good note; nursing turnover is down, and we are working on several projects for stabilization and growth.

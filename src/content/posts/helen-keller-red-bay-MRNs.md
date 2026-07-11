@@ -4,6 +4,7 @@ slug: helen-keller-red-bay-MRNs
 excerpt: Starting as early as August 28, 2023, you will begin to see patients in 1Chart with medical record numbers starting with “03”.   These patients from Helen Keller and Red Bay hospitals will begin to be preloaded into 1Chart.  PLEASE, PLEASE, PLEASE ignore these records.
 date: 2023-08-22
 author: IT Leadership
+category: it-ehr
 ---
 
 ### Update from IT Leadership

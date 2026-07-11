@@ -4,6 +4,7 @@ slug: inclement-weather
 excerpt: The January 2024 ice storm highlighted a problem. Several on-call physicians could not make it in to see patients due to the roads. To be clear,  providers are responsible for being here and caring for their patients....
 date: 2024-11-20
 author: Jonathan White
+category: clinical
 ---
 
 The January 2024 ice storm highlighted a problem. Several on-call physicians could not make it in to see patients due to the roads. To be clear, providers are responsible for being here and caring for their patients.

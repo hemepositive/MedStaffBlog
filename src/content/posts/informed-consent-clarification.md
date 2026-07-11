@@ -4,6 +4,7 @@ slug: informed-consent-clarification
 excerpt: CMS recently published revisions and clarifications to Hospital Interpretive Guidelines for Informed Consent. I have attached this memorandum from CMS for your review.
 date: 2024-07-02
 author: Jonathan White
+category: clinical
 ---
 
 ### Informed Consent Clarification from CMS

@@ -4,6 +4,7 @@ slug: burnout-on-the-rise
 excerpt: Last summer, Medscape surveyed 9000+ physicians for the latest Medscape Physician Burnout & Depression Report. Not surprisingly, burnout increased significantly during the COVID years, with 53% of all surveyed expressing burnout...
 date: 2023-06-27
 author: Jonathan White
+category: education
 ---
 
 ### Burnout: "long-term, unresolved, job-related stress leading to exhaustion, cynicism, detachment from job responsibilities, and lacking a sense of personal accomplishment."[^1]

@@ -4,6 +4,7 @@ slug: joint-commission-survey-prep
 excerpt: Our Joint Commission survey is approaching in March. Every physician should be familiar with these five key topics that surveyors commonly focus on. Review the quick reference guide and be prepared.
 date: 2026-02-12
 author: Jonathan White
+category: education
 ---
 
 Our Joint Commission survey is approaching in March, and preparation is essential. Surveyors will be on-site observing processes, reviewing documentation, and speaking with staff and physicians. **Every physician and APP should be familiar with the topics below**, which represent the areas most likely to come up during your interactions with surveyors.

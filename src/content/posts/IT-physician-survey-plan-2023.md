@@ -4,6 +4,7 @@ slug: IT-physician-survey-plan-2023
 excerpt: The HH administration is reviewing the most recent physician survey results, including several IT-related complaints. Two problems physicians mentioned...
 date: 2023-09-15
 author: Jonathan White
+category: it-ehr
 ---
 
 The HH administration is reviewing the most recent physician survey results, including several IT-related complaints. Two problems physicians mentioned were slow, outdated PCs and the problem of Cerner reloading when logging in using a badge. The IT team does take your concerns seriously and wants to help you work as efficiently as possible.

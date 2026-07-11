@@ -4,6 +4,7 @@ slug: HH-Lung-Center-and-PSA
 excerpt: The HH Lung Center is excited to grow its services to better meet the expanding needs of the Huntsville community through the integration of Pulmonary and Sleep Associates of Huntsville (PSA)...
 date: 2025-03-31
 author: Jonathan White
+category: announcements
 ---
 
 ### PSA Joins HH Lung Center

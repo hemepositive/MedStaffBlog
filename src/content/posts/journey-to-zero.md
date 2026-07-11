@@ -4,6 +4,7 @@ slug: journey-to-zero
 excerpt: NEJM recently published the results of the SafeCare study that looked at the incidence of adverse events during hospitalizations. In a random sample of 2800 admissions, at least one adverse event was found in 23.6% of those admissions.
 date: 2023-02-12
 author: Jonathan White
+category: education
 ---
 
 ### High Reliability Organization Training Prevents Safety Events

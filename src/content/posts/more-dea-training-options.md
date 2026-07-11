@@ -4,6 +4,7 @@ slug: more-dea-training-options
 excerpt: Here are additional resources to meet with upcoming DEA training requirement. The Medical Association of the State of Alabama is offering
 date: 2023-06-06
 author: Jonathan White
+category: education
 ---
 
 Here are additional resources to meet with upcoming DEA training requirement. The Medical Association of the State of Alabama is offering 8-hour training that satisfies the new DEA requirement. This meeting will be held at the Bradley Lecture Center on June 24th, but will also have a virtual option. For those who cannot attend this event, below are additional options including some offered through Huntsville Hospital’s Learning Management System.

@@ -4,6 +4,7 @@ slug: outside-records
 excerpt: Obtaining medical records from an external hospital or clinic can be extremely helpful. While not everyone has such records, the following instructions outline how to acquire them for those who do.
 date: 2026-02-10
 author: Jonathan White
+category: it-ehr
 ---
 
 Obtaining medical records from an external hospital or clinic can be extremely helpful. While not everyone has such records, the following instructions outline how to acquire them for those who do.

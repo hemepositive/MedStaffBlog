@@ -4,6 +4,7 @@ slug: IT-update-feb24
 excerpt: There have been ongoing problems with providers canceling PSOs. The cancellation of a PSO has significant background effects in Cerner...
 date: 2024-02-16
 author: Jonathan White
+category: it-ehr
 ---
 
 ### PSO vs. Transfer Patient vs. Change Attending To

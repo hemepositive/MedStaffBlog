@@ -4,6 +4,7 @@ slug: meet-the-vpma
 excerpt: Jonathan assumed the role of Vice President of Medical Affairs for Huntsville Hospital on Sept. 1, 2022. He grew up in Cullman County and graduated from Cullman High School in 1991, and and completed a B.S. in Biology
 date: 2023-02-10
 author: Med Staff Office
+category: announcements
 ---
 
 ### Dr. Jonathan White, Vice President of Medical Affairs

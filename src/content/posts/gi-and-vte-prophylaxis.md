@@ -4,6 +4,7 @@ slug: gi-and-vte-prophylaxis
 excerpt: A key aspect of preventing stress ulcers and VTE is constant reassessment. A significant safety concern is missing an opportunity to start prophylaxis...
 date: 2024-02-16
 author: Jonathan White
+category: clinical
 ---
 
 ### GI and VTE Prophylaxis Re-assessments

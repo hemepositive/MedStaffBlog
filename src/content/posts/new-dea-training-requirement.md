@@ -4,6 +4,7 @@ slug: new-dea-training-requirement
 excerpt: On December 29, 2022, the Consolidated Appropriations Act of 2023 enacted a new one-time, eight-hour training requirement for all Drug Enforcement Administration (DEA)-registered practitioners...
 date: 2023-05-09
 author: Jonathan White
+category: education
 ---
 
 On December 29, 2022, the Consolidated Appropriations Act of 2023 enacted a new one-time, eight-hour training requirement for all Drug Enforcement Administration (DEA)-registered practitioners on the treatment and management of patients with opioid or other substance use disorders.
