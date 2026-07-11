@@ -8,7 +8,8 @@
       "Skill(artifact-design:*)",
       "WebFetch(domain:medicalstaffnews.com)",
       "Bash(rm /Users/uxorious/hh_newsletter/MedStaffBlog/src/pages/it-updates.md)",
-      "Bash(npm run *)"
+      "Bash(npm run *)",
+      "Edit(/.claude/skills/publish-post/**)"
     ]
   }
 }
