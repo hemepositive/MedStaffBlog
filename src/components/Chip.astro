@@ -1,0 +1,10 @@
+---
+export interface Props {
+  /** One of: critical | warning | info | it-ehr | clinical | education | announcements */
+  variant: string;
+  label: string;
+}
+const { variant, label } = Astro.props;
+---
+
+<span class:list={['chip', variant]}>{label}</span>

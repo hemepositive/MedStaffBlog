@@ -1,0 +1,80 @@
+---
+import Chip from './Chip.astro';
+import { CATEGORIES } from '../content.config';
+import { postUrl, formatDay, type Post } from '../lib/posts';
+
+export interface Props {
+  post: Post;
+}
+const { post } = Astro.props;
+const { data } = post;
+const chipVariant = data.urgency !== 'info' ? data.urgency : data.category;
+---
+
+<article class:list={['a-card', data.urgency]}>
+  <div class="meta-row">
+    <Chip variant={chipVariant} label={CATEGORIES[data.category]} />
+  </div>
+  <h3><a href={postUrl(post)}>{data.title}</a></h3>
+  <p class="what-changed">{data.excerpt}</p>
+  {data.effectiveDate && (
+    <div class="meta-row bottom">
+      <span class="effective">Effective {formatDay(data.effectiveDate)}</span>
+    </div>
+  )}
+</article>
+
+<style>
+  .a-card {
+    background: var(--surface-raised);
+    border: 1px solid var(--line);
+    border-left: 4px solid var(--info);
+    border-radius: 12px;
+    padding: 26px 28px;
+    box-shadow: var(--shadow);
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  .a-card.warning {
+    border-left-color: var(--warning);
+  }
+  .a-card.critical {
+    border-left-color: var(--critical);
+  }
+  h3 {
+    font-size: 19px;
+    font-weight: 650;
+    line-height: 1.35;
+  }
+  h3 a {
+    color: var(--ink);
+  }
+  h3 a:hover {
+    color: var(--brand-ink);
+  }
+  .what-changed {
+    font-size: 15.5px;
+    margin: 0;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+  .meta-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+    font-size: 13.5px;
+    color: var(--muted);
+  }
+  .meta-row.bottom {
+    margin-top: auto;
+    padding-top: 10px;
+  }
+  .effective {
+    font-weight: 600;
+    color: var(--warning);
+  }
+</style>

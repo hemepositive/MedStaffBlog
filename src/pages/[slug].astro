@@ -1,37 +1,85 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import Card from '../components/Card.astro';
+import Chip from '../components/Chip.astro';
 import { getCollection, render } from 'astro:content';
+import { CATEGORIES } from '../content.config';
+import { postSlug, formatMonth, formatDay, type Post } from '../lib/posts';
 
 export async function getStaticPaths() {
   const posts = await getCollection('posts');
-
-  return posts.map(post => ({
-    params: {
-      slug: post.data.slug
-    },
-    props: {
-      post
-    }
+  return posts.map((post: Post) => ({
+    params: { slug: postSlug(post) },
+    props: { post },
   }));
 }
 
-const { post } = Astro.props;
+interface Props {
+  post: Post;
+}
+const { post } = Astro.props as Props;
 const { data } = post;
 const { Content } = await render(post);
+
+const categoryHref = data.category === 'it-ehr' ? '/it-updates' : `/${data.category}`;
+const chipVariant = data.urgency !== 'info' ? data.urgency : data.category;
 ---
 
-<Layout title={data.title}>
-  <section class="page-content">
-    <div class="container">
-      <Card>
-        <a class="btn" href="/">Go Back</a>
-        <h2>{data.title}</h2>
-        <div>
-          Written by <strong>{data.author} </strong> on {new Date(data.date).toLocaleDateString()}
-        </div>
-        <Content />
-      </Card>
+<Layout title={data.title} description={data.excerpt}>
+  <article class="container post">
+    <header class="post-head">
+      <nav class="crumb" aria-label="Breadcrumb">
+        <a href={categoryHref}>← {CATEGORIES[data.category]}</a>
+      </nav>
+      <Chip variant={chipVariant} label={CATEGORIES[data.category]} />
+      <h1>{data.title}</h1>
+      <p class="byline">
+        <strong>{data.author}</strong> · <time datetime={data.date.toISOString().slice(0, 10)}>{formatMonth(data.date)}</time>
+        {data.effectiveDate && (
+          <span class="effective"> · Effective {formatDay(data.effectiveDate)}</span>
+        )}
+      </p>
+    </header>
+    <div class="prose">
+      <Content />
     </div>
-  </section>
+  </article>
 </Layout>
+
+<style>
+  .post {
+    max-width: 860px;
+    padding-top: 44px;
+  }
+  .crumb {
+    margin-bottom: 26px;
+    font-size: 14px;
+  }
+  .crumb a {
+    color: var(--muted);
+    font-weight: 500;
+  }
+  .crumb a:hover {
+    color: var(--brand-ink);
+  }
+  .post-head h1 {
+    font-size: clamp(26px, 4.2vw, 34px);
+    letter-spacing: -0.015em;
+    margin: 14px 0 10px;
+    max-width: 24ch;
+  }
+  .byline {
+    font-size: 14px;
+    color: var(--muted);
+  }
+  .byline strong {
+    color: var(--body);
+    font-weight: 600;
+  }
+  .effective {
+    color: var(--warning);
+    font-weight: 600;
+  }
+  .prose {
+    margin-top: 34px;
+  }
+</style>

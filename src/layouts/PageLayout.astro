@@ -1,0 +1,26 @@
+---
+import Layout from './Layout.astro';
+
+export interface Props {
+  title?: string;
+  frontmatter?: { title?: string };
+}
+const title = Astro.props.title ?? Astro.props.frontmatter?.title;
+---
+
+<Layout title={title}>
+  <div class="page container">
+    <article class="prose">
+      <slot />
+    </article>
+  </div>
+</Layout>
+
+<style>
+  .page {
+    padding-top: 44px;
+  }
+  .page :global(.prose) {
+    margin: 0 auto;
+  }
+</style>

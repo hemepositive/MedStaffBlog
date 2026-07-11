@@ -1,53 +1,138 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import Showcase from '../components/Showcase.astro';
-import Card from '../components/Card.astro';
-import { getCollection } from 'astro:content';
+import PostCard from '../components/PostCard.astro';
+import StreamList from '../components/StreamList.astro';
+import {
+  getPostsNewestFirst,
+  byCategory,
+  isInAttentionZone,
+  isPinned,
+  postUrl,
+  formatMonth,
+} from '../lib/posts';
 
-const posts = await getCollection('posts');
-posts.sort((a, b) => Date.parse(b.data.date) - Date.parse(a.data.date));
-
+const posts = await getPostsNewestFirst();
+const pinned = posts.filter((p) => isPinned(p));
+const attention = posts.filter((p) => isInAttentionZone(p)).slice(0, 4);
+const announcements = byCategory(posts, 'announcements').slice(0, 3);
 ---
 
 <Layout title="HH Medical Staff News">
-  <Showcase heading="Medical Staff News" text="Periodic updates for our medical staff" />
-  <section class="page-content">
-    <div class="container">
-      {posts.map(post => (
-        <Card>
-          <h3>{post.data.title}</h3>
-          <div>
-          Written by <strong>{post.data.author} </strong> on {new Date(post.data.date).toLocaleDateString()}
-        </div>
-          <p>{post.data.excerpt}</p>
-          <a class="more-btn" href={`/${post.data.slug}`}>Read More</a>
-        </Card>
-      ))}
+  {pinned.map((post) => (
+    <div class="pinned-notice">
+      <div class="container">
+        <span class="label">Notice</span>
+        <a href={postUrl(post)}>{post.data.title} →</a>
+      </div>
     </div>
-  </section>
+  ))}
+
+  <div class="container home">
+    {attention.length > 0 && (
+      <>
+        <p class="zone-label">Needs your attention</p>
+        <div class="attention">
+          {attention.map((post) => (
+            <PostCard post={post} />
+          ))}
+        </div>
+      </>
+    )}
+
+    <p class="zone-label">Latest by category</p>
+    <div class="streams">
+      <StreamList title="IT & EHR Updates" posts={byCategory(posts, 'it-ehr')} href="/it-updates" dot="var(--info)" />
+      <StreamList title="Clinical Updates" posts={byCategory(posts, 'clinical')} href="/clinical" dot="var(--warning)" />
+      <StreamList title="Education & CME" posts={byCategory(posts, 'education')} href="/education" dot="var(--edu)" />
+    </div>
+
+    {announcements.length > 0 && (
+      <section class="announcements">
+        <p class="zone-label">Announcements</p>
+        <ul>
+          {announcements.map((post) => (
+            <li>
+              <a href={postUrl(post)}>{post.data.title}</a>
+              <time datetime={post.data.date.toISOString().slice(0, 10)}>{formatMonth(post.data.date)}</time>
+            </li>
+          ))}
+        </ul>
+        <a class="view-all" href="/announcements">All announcements →</a>
+      </section>
+    )}
+  </div>
 </Layout>
 
-
 <style>
-  
-/* Prevent link color change when visited
-a,
-a:hover, 
-a:active  
-a:visited {
-  color: inherit; 
-  color: (var(--color-goldish));
-}  */
+  .pinned-notice {
+    background: var(--critical-tint);
+    border-bottom: 1px solid var(--line);
+    font-size: 14.5px;
+  }
+  .pinned-notice .container {
+    display: flex;
+    align-items: baseline;
+    gap: 12px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+  .pinned-notice .label {
+    color: var(--critical);
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    font-size: 12px;
+    text-transform: uppercase;
+  }
+  .pinned-notice a {
+    color: var(--ink);
+    font-weight: 600;
+  }
 
-.more-btn {
-  display: inline-block;
-  padding: 0.5rem 1rem;
-  border-radius: 5px;
-  background: var(--color-secondary);
-  color: #fff;
-  text-transform: uppercase;
-  font-size: 0.8rem;
-  letter-spacing: 1px;
-  transition: all 0.3s ease;
-}
+  .home {
+    padding-top: 52px;
+  }
+  .attention {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
+    gap: 24px;
+    margin-bottom: 72px;
+  }
+  .streams {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 48px;
+  }
+  .announcements {
+    margin-top: 72px;
+  }
+  .announcements ul {
+    list-style: none;
+  }
+  .announcements li {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 20px;
+    padding: 12px 2px;
+    border-bottom: 1px solid var(--line);
+  }
+  .announcements li a {
+    font-weight: 500;
+    color: var(--ink);
+    font-size: 15px;
+  }
+  .announcements li a:hover {
+    color: var(--brand-ink);
+  }
+  .announcements time {
+    font-size: 13px;
+    color: var(--muted);
+    flex: none;
+  }
+  .view-all {
+    display: inline-block;
+    margin-top: 14px;
+    font-size: 14px;
+    font-weight: 600;
+  }
 </style>

@@ -1,155 +1,172 @@
 ---
-import logo from '../images/HH-logo.png';
+const path = Astro.url.pathname;
+const links = [
+  { href: '/', label: 'Home' },
+  { href: '/it-updates', label: 'IT & EHR' },
+  { href: '/clinical', label: 'Clinical' },
+  { href: '/education', label: 'Education' },
+];
+const isActive = (href: string) => (href === '/' ? path === '/' : path.startsWith(href));
 ---
 
-<header class="header">
-  <div class="container">
-    <div class="logo">
-      <a href="/">
-        <img src={logo} alt="" />
-      </a>
-    </div><nav class="navbar">
-      <ul class="nav-menu">
-        <li class="nav-item">
-          <a href="/" class="nav-link">News</a>
-        </li>
-        <li class="nav-item">
-          <a href="/NuDESC" class="nav-link">NuDESC</a>
-        </li>
-        <li class="nav-item">
-          <a href="/burnout" class="nav-link">Burnout</a>
-        </li>
-        <li class="nav-item">
-          <a href="/it-updates" class="nav-link">IT Updates</a>
-        </li>
-        <li class="nav-item">
-          <a href="/staff" class="nav-link">Staff</a>
-        </li>
-      </ul>
-      <div class="hamburger">
-        <span class="bar"></span>
-        <span class="bar"></span>
-        <span class="bar"></span>
-      </div>
+<header class="site-header">
+  <div class="inner">
+    <a class="logo" href="/">
+      <span class="logo-mark">H</span>
+      <span class="logo-text">Med Staff News</span>
+    </a>
+    <nav class="pillars" aria-label="Sections">
+      {links.map((l) => (
+        <a href={l.href} class:list={[{ active: isActive(l.href) }]}>{l.label}</a>
+      ))}
     </nav>
+    <button class="search-trigger" id="search-open" aria-label="Search the site">
+      <span aria-hidden="true">⌕</span>
+      <span class="search-hint">Search…</span>
+      <kbd>⌘K</kbd>
+    </button>
+    <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode">◐</button>
   </div>
 </header>
 
 <style>
-  .header {
-    height: 70px;
-    background: var(--color-primary);
+  .site-header {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    background: color-mix(in srgb, var(--surface-raised) 94%, transparent);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid var(--line);
   }
-
-  .header .container {
-    height: 100%;
+  .inner {
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 13px 28px;
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    padding: 0 20px;
+    gap: 20px;
   }
-
-  .header img {
-    height: 35px;
-    vertical-align: middle;
-  }
-
-  .navbar {
-    min-height: 70px;
+  .logo {
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    gap: 10px;
+    font-weight: 700;
+    color: var(--ink);
+    font-size: 17px;
+    letter-spacing: -0.01em;
+    white-space: nowrap;
   }
-
-  .navbar ul {
-    list-style: none;
-  }
-
-  .nav-branding {
-    font-size: 2rem;
-  }
-
-  .nav-menu {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 60px;
-  }
-
-  .nav-link {
-    transition: 0.3s ease-out;
-  }
-
-  .nav-link:hover {
-    color: dodgerblue;
+  .logo:hover {
     text-decoration: none;
   }
-
-  .hamburger {
-    display: none;
+  .logo-mark {
+    width: 32px;
+    height: 32px;
+    border-radius: 8px;
+    background: var(--brand);
+    color: #fff;
+    display: grid;
+    place-items: center;
+    font-size: 16px;
+    font-weight: 800;
+    flex: none;
+  }
+  :global([data-theme='dark']) .logo-mark {
+    color: #06211e;
+  }
+  .pillars {
+    display: flex;
+    gap: 4px;
+    margin-left: 6px;
+    overflow-x: auto;
+  }
+  .pillars a {
+    font-size: 15px;
+    font-weight: 500;
+    padding: 7px 13px;
+    border-radius: 8px;
+    color: var(--body);
+    white-space: nowrap;
+  }
+  .pillars a:hover {
+    background: var(--surface-sunken);
+    color: var(--ink);
+    text-decoration: none;
+  }
+  .pillars a.active {
+    color: var(--brand-ink);
+    background: var(--brand-tint);
+    font-weight: 600;
+  }
+  .search-trigger {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    background: var(--surface-sunken);
+    padding: 8px 14px;
+    min-width: 200px;
+    color: var(--muted);
+    font-size: 14px;
+    font-family: inherit;
+    cursor: pointer;
+    text-align: left;
+  }
+  .search-trigger kbd {
+    margin-left: auto;
+    font-family: inherit;
+    font-size: 11.5px;
+    border: 1px solid var(--line);
+    border-radius: 5px;
+    background: var(--surface-raised);
+    padding: 1px 6px;
+  }
+  .theme-toggle {
+    flex: none;
+    width: 38px;
+    height: 38px;
+    border-radius: 10px;
+    border: 1px solid var(--line);
+    background: var(--surface-sunken);
+    color: var(--body);
+    font-size: 17px;
     cursor: pointer;
   }
-
-  .bar {
-    display: block;
-    width: 25px;
-    height: 3px;
-    margin: 5px auto;
-    -webkit-transition: all 0.3s ease;
-    transition: all 0.3s ease;
-    background-color: white;
+  .theme-toggle:hover {
+    color: var(--ink);
+    border-color: var(--muted);
   }
-
-  @media (max-width: 1024px) {
-    .hamburger {
-      display: block;
+  @media (max-width: 860px) {
+    .inner {
+      flex-wrap: wrap;
+      row-gap: 8px;
     }
-
-    .hamburger.active .bar:nth-child(2) {
-      opacity: 0;
-    }
-    .hamburger.active .bar:nth-child(1) {
-      transform: translateY(8px) rotate(45deg);
-    }
-    .hamburger.active .bar:nth-child(3) {
-      transform: translateY(-8px) rotate(-45deg);
-    }
-
-    .nav-menu {
-      position: fixed;
-      left: -100%;
-      top: 70px;
-      gap: 0;
-      flex-direction: column;
-      background-color: var(--color-primary);
+    .pillars {
+      order: 3;
       width: 100%;
-      text-align: center;
-      transition: 0.3s;
+      margin-left: 0;
     }
-
-    .nav-item {
-      margin: 16px 0;
+    .search-trigger {
+      min-width: 0;
     }
-
-    .nav-menu.active {
-      left: 0;
+    .search-hint,
+    .search-trigger kbd {
+      display: none;
     }
   }
 </style>
 
 <script>
-  const hamburger = document.querySelector('.hamburger');
-  const navMenu = document.querySelector('.nav-menu');
-
-  hamburger.addEventListener('click', () => {
-    hamburger.classList.toggle('active');
-    navMenu.classList.toggle('active');
+  const toggle = document.getElementById('theme-toggle');
+  toggle?.addEventListener('click', () => {
+    const root = document.documentElement;
+    const current =
+      root.dataset.theme ??
+      (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+    const next = current === 'dark' ? 'light' : 'dark';
+    root.dataset.theme = next;
+    localStorage.setItem('theme', next);
   });
-
-  document.querySelectorAll('.nav-link').forEach((n) =>
-    n.addEventListener('click', () => {
-      hamburger.classList.remove('active');
-      navMenu.classList.remove('active');
-    })
-  );
 </script>

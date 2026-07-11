@@ -1,0 +1,101 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Chip from './Chip.astro';
+import { CATEGORIES, type Category } from '../content.config';
+import { getPostsNewestFirst, byCategory, postUrl, formatMonth, isInAttentionZone } from '../lib/posts';
+
+export interface Props {
+  category: Category;
+  description: string;
+}
+const { category, description } = Astro.props;
+const title = CATEGORIES[category];
+const posts = byCategory(await getPostsNewestFirst(), category);
+---
+
+<Layout title={`${title} — Medical Staff News`} description={description}>
+  <div class="container listing">
+    <header class="list-head">
+      <h1>{title}</h1>
+      <p>{description}</p>
+    </header>
+    <ul>
+      {posts.map((post) => (
+        <li>
+          <div class="when">
+            <time datetime={post.data.date.toISOString().slice(0, 10)}>{formatMonth(post.data.date)}</time>
+            {isInAttentionZone(post) && <Chip variant={post.data.urgency} label="Attention" />}
+          </div>
+          <div class="what">
+            <a href={postUrl(post)}>{post.data.title}</a>
+            <p>{post.data.excerpt}</p>
+          </div>
+        </li>
+      ))}
+    </ul>
+  </div>
+</Layout>
+
+<style>
+  .listing {
+    max-width: 860px;
+    padding-top: 48px;
+  }
+  .list-head h1 {
+    font-size: clamp(26px, 4vw, 34px);
+    letter-spacing: -0.015em;
+  }
+  .list-head p {
+    color: var(--muted);
+    margin-top: 8px;
+    max-width: 60ch;
+  }
+  ul {
+    list-style: none;
+    margin-top: 36px;
+  }
+  li {
+    display: grid;
+    grid-template-columns: 150px 1fr;
+    gap: 20px;
+    padding: 26px 0;
+    border-bottom: 1px solid var(--line);
+  }
+  .when {
+    font-size: 13.5px;
+    color: var(--muted);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+    padding-top: 3px;
+  }
+  .what a {
+    font-size: 18px;
+    font-weight: 650;
+    color: var(--ink);
+    line-height: 1.35;
+  }
+  .what a:hover {
+    color: var(--brand-ink);
+  }
+  .what p {
+    margin-top: 6px;
+    font-size: 15px;
+    color: var(--body);
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+  @media (max-width: 560px) {
+    li {
+      grid-template-columns: 1fr;
+      gap: 8px;
+    }
+    .when {
+      flex-direction: row;
+      align-items: center;
+    }
+  }
+</style>

@@ -1,0 +1,81 @@
+---
+import Chip from './Chip.astro';
+import { postUrl, formatMonth, isInAttentionZone, type Post } from '../lib/posts';
+
+export interface Props {
+  title: string;
+  posts: Post[];
+  href: string;
+  /** CSS color token for the category dot, e.g. "var(--info)" */
+  dot: string;
+  limit?: number;
+}
+const { title, posts, href, dot, limit = 5 } = Astro.props;
+const shown = posts.slice(0, limit);
+---
+
+<section class="stream">
+  <h2><span class="stream-dot" style={`background:${dot}`}></span>{title}</h2>
+  <ul>
+    {shown.map((post) => (
+      <li>
+        <a href={postUrl(post)}>{post.data.title}</a>
+        <div class="sub">
+          <time datetime={post.data.date.toISOString().slice(0, 10)}>{formatMonth(post.data.date)}</time>
+          {isInAttentionZone(post) && <Chip variant={post.data.urgency} label="Attention" />}
+        </div>
+      </li>
+    ))}
+  </ul>
+  <a class="view-all" href={href}>All {title.toLowerCase()} →</a>
+</section>
+
+<style>
+  .stream h2 {
+    font-size: 16px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    padding-bottom: 14px;
+    border-bottom: 2px solid var(--line);
+    margin-bottom: 6px;
+  }
+  .stream-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 3px;
+    flex: none;
+  }
+  ul {
+    list-style: none;
+  }
+  li {
+    padding: 17px 2px;
+    border-bottom: 1px solid var(--line);
+  }
+  li a {
+    font-weight: 550;
+    font-size: 15.5px;
+    color: var(--ink);
+    display: block;
+    margin-bottom: 5px;
+    line-height: 1.4;
+  }
+  li a:hover {
+    color: var(--brand-ink);
+  }
+  .sub {
+    font-size: 13px;
+    color: var(--muted);
+    display: flex;
+    gap: 10px;
+    align-items: center;
+  }
+  .view-all {
+    display: inline-block;
+    margin-top: 16px;
+    font-size: 14px;
+    font-weight: 600;
+  }
+</style>

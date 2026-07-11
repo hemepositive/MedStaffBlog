@@ -1,11 +1,116 @@
+/* ==========================================================================
+   HH Med Staff News — design tokens & base styles
+   Light is the designed-first theme; dark follows the OS preference and the
+   header toggle (data-theme on <html> wins in both directions).
+   ========================================================================== */
+
 :root {
-  --color-primary: #00833d;
-  --color-secondary: #0040ae;
-  --color-green-darker: #005c3d;
-  --color-purple: #830078;
-  --color-purple-darker: #5c0054;
-  --color-dark-grey: #3c4a3e;
+  --surface: #f8fafc;
+  --surface-raised: #ffffff;
+  --surface-sunken: #f1f5f9;
+  --ink: #0f172a;
+  --body: #334155;
+  --muted: #64748b;
+  --line: #e2e8f0;
+  --brand: #0f766e;
+  --brand-ink: #115e59;
+  --brand-tint: #ccfbf1;
+  --critical: #b91c1c;
+  --critical-tint: #fef2f2;
+  --warning: #b45309;
+  --warning-tint: #fffbeb;
+  --warning-line: #fde68a;
+  --info: #1d4ed8;
+  --info-tint: #eff6ff;
+  --info-line: #bfdbfe;
+  --edu: #6d28d9;
+  --edu-tint: #f5f3ff;
+  --ok: #15803d;
+  --ok-tint: #dcfce7;
+  --shadow: 0 1px 2px rgba(15, 23, 42, 0.05), 0 4px 12px rgba(15, 23, 42, 0.05);
 }
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --surface: #0b1220;
+    --surface-raised: #121a2b;
+    --surface-sunken: #0e1626;
+    --ink: #f1f5f9;
+    --body: #cbd5e1;
+    --muted: #8fa0b8;
+    --line: #24304a;
+    --brand: #2dd4bf;
+    --brand-ink: #5eead4;
+    --brand-tint: #0f2e2b;
+    --critical: #f87171;
+    --critical-tint: #2a1215;
+    --warning: #fbbf24;
+    --warning-tint: #2a2008;
+    --warning-line: #574312;
+    --info: #93b4ff;
+    --info-tint: #14203a;
+    --info-line: #2a3d63;
+    --edu: #c4b5fd;
+    --edu-tint: #221a3a;
+    --ok: #4ade80;
+    --ok-tint: #123521;
+    --shadow: 0 1px 2px rgba(0, 0, 0, 0.4), 0 4px 14px rgba(0, 0, 0, 0.35);
+  }
+}
+
+:root[data-theme='dark'] {
+  --surface: #0b1220;
+  --surface-raised: #121a2b;
+  --surface-sunken: #0e1626;
+  --ink: #f1f5f9;
+  --body: #cbd5e1;
+  --muted: #8fa0b8;
+  --line: #24304a;
+  --brand: #2dd4bf;
+  --brand-ink: #5eead4;
+  --brand-tint: #0f2e2b;
+  --critical: #f87171;
+  --critical-tint: #2a1215;
+  --warning: #fbbf24;
+  --warning-tint: #2a2008;
+  --warning-line: #574312;
+  --info: #93b4ff;
+  --info-tint: #14203a;
+  --info-line: #2a3d63;
+  --edu: #c4b5fd;
+  --edu-tint: #221a3a;
+  --ok: #4ade80;
+  --ok-tint: #123521;
+  --shadow: 0 1px 2px rgba(0, 0, 0, 0.4), 0 4px 14px rgba(0, 0, 0, 0.35);
+}
+
+:root[data-theme='light'] {
+  --surface: #f8fafc;
+  --surface-raised: #ffffff;
+  --surface-sunken: #f1f5f9;
+  --ink: #0f172a;
+  --body: #334155;
+  --muted: #64748b;
+  --line: #e2e8f0;
+  --brand: #0f766e;
+  --brand-ink: #115e59;
+  --brand-tint: #ccfbf1;
+  --critical: #b91c1c;
+  --critical-tint: #fef2f2;
+  --warning: #b45309;
+  --warning-tint: #fffbeb;
+  --warning-line: #fde68a;
+  --info: #1d4ed8;
+  --info-tint: #eff6ff;
+  --info-line: #bfdbfe;
+  --edu: #6d28d9;
+  --edu-tint: #f5f3ff;
+  --ok: #15803d;
+  --ok-tint: #dcfce7;
+  --shadow: 0 1px 2px rgba(15, 23, 42, 0.05), 0 4px 12px rgba(15, 23, 42, 0.05);
+}
+
+/* ---------- base ---------- */
 
 *,
 *::before,
@@ -14,100 +119,300 @@
   margin: 0;
   padding: 0;
 }
-/* CHANGE global font here */
+
+html {
+  color-scheme: light dark;
+}
+:root[data-theme='light'] {
+  color-scheme: light;
+}
+:root[data-theme='dark'] {
+  color-scheme: dark;
+}
+
 body {
-  font-family: 'Roboto', sans-serif;
-  font-size: 16px;
-  line-height: 1.5;
-  background: #f8fafc;
-  color: #333;
-}
-
-a {
-  text-decoration: none;
-  color: #fff;
-}
-a:hover {
-  color: dodgerblue;
-}
-
-p {
-  margin: 1rem 0;
-}
-
-ul {
-  list-style-type: disc;
-  list-style-position: inside;
-}
-
-li {
-  line-height: 2;
+  font-family: 'IBM Plex Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 16.5px;
+  line-height: 1.65;
+  background: var(--surface);
+  color: var(--body);
+  -webkit-font-smoothing: antialiased;
 }
 
 h1,
 h2,
-h3 {
-  line-height: 1.2;
+h3,
+h4 {
+  color: var(--ink);
+  line-height: 1.25;
+  text-wrap: balance;
 }
 
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 30px;
+a {
+  color: var(--brand-ink);
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid var(--brand);
+  outline-offset: 2px;
+  border-radius: 4px;
 }
 
-.btn {
-  display: inline-block;
-  padding: 0.5rem 1rem;
-  border-radius: 5px;
-  background: #333;
-  color: #fff;
-  text-transform: uppercase;
-  font-size: 0.8rem;
-  letter-spacing: 1px;
-  transition: all 0.3s ease;
+time,
+.num {
+  font-variant-numeric: tabular-nums;
 }
 
-.logos-small {
-  display: none;
-}
-
-/* Page Content */
-.page-content {
-  margin: 20px 0;
-}
-
-.page-content img {
+img {
   max-width: 100%;
   height: auto;
 }
 
-.page-content h2,
-.page-content h3 {
-  margin: 20px 0;
+.container {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 0 28px;
 }
 
-.page-content h2 {
-  font-size: 40px;
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
 }
 
-.page-content h3 {
-  font-size: 25px;
+/* ---------- chips & labels ---------- */
+
+.chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 11.5px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  border-radius: 999px;
+  padding: 3px 11px;
+  white-space: nowrap;
+}
+.chip.critical { color: var(--critical); background: var(--critical-tint); }
+.chip.warning { color: var(--warning); background: var(--warning-tint); }
+.chip.info { color: var(--info); background: var(--info-tint); }
+.chip.it-ehr { color: var(--info); background: var(--info-tint); }
+.chip.clinical { color: var(--warning); background: var(--warning-tint); }
+.chip.education { color: var(--edu); background: var(--edu-tint); }
+.chip.announcements { color: var(--muted); background: var(--surface-sunken); }
+
+.zone-label {
+  font-size: 12.5px;
+  font-weight: 700;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin: 0 0 22px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.zone-label::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: var(--line);
 }
 
-@media (max-width: 960px) {
-  .logos-small {
-    display: block;
-    margin: auto;
-  }
-  .logos {
-    display: none;
-  }
+/* ==========================================================================
+   Prose — styling for rendered markdown (article bodies, static pages).
+   Content authors write plain markdown; these defaults make it clinical-doc
+   quality with no per-post HTML or CSS.
+   ========================================================================== */
+
+.prose {
+  max-width: 70ch;
+  font-size: 16.5px;
+  line-height: 1.7;
 }
 
-@media (max-width: 500px) {
-  h1,
-  h2 {
-    text-align: center;
+.prose h1,
+.prose h2 {
+  font-size: 24px;
+  margin: 40px 0 8px;
+  letter-spacing: -0.01em;
+}
+.prose h3 {
+  font-size: 20px;
+  margin: 34px 0 6px;
+}
+.prose h4 {
+  font-size: 17px;
+  margin: 28px 0 4px;
+}
+
+.prose p {
+  margin: 18px 0;
+}
+
+.prose ul,
+.prose ol {
+  margin: 18px 0;
+  padding-left: 26px;
+}
+.prose li {
+  margin: 6px 0;
+}
+.prose li::marker {
+  color: var(--brand);
+}
+
+.prose strong {
+  color: var(--ink);
+}
+
+.prose a {
+  text-decoration: underline;
+  text-decoration-color: color-mix(in srgb, var(--brand) 45%, transparent);
+  text-underline-offset: 2px;
+}
+
+.prose hr {
+  border: none;
+  border-top: 1px solid var(--line);
+  margin: 36px 0;
+}
+
+.prose blockquote {
+  border-left: 3px solid var(--brand);
+  background: var(--surface-sunken);
+  border-radius: 0 10px 10px 0;
+  padding: 14px 20px;
+  margin: 24px 0;
+  color: var(--ink);
+}
+.prose blockquote p {
+  margin: 6px 0;
+}
+
+.prose code {
+  background: var(--surface-sunken);
+  border: 1px solid var(--line);
+  border-radius: 5px;
+  padding: 0.1em 0.35em;
+  font-size: 0.88em;
+}
+
+/* Images render as centered, framed figures automatically. */
+.prose img {
+  display: block;
+  margin: 28px auto;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: var(--surface-raised);
+  padding: 8px;
+}
+
+/* Markdown tables become scannable clinical tables; wide ones scroll
+   internally so the page never scrolls sideways. */
+.prose table {
+  display: block;
+  overflow-x: auto;
+  border-collapse: collapse;
+  margin: 26px 0;
+  font-size: 14.5px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+}
+.prose th {
+  text-align: left;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--muted);
+  background: var(--surface-sunken);
+  padding: 12px 16px;
+  border-bottom: 1px solid var(--line);
+}
+.prose td {
+  padding: 13px 16px;
+  border-bottom: 1px solid var(--line);
+  vertical-align: top;
+}
+.prose tr:last-child td {
+  border-bottom: none;
+}
+.prose td:first-child {
+  font-weight: 600;
+  color: var(--ink);
+}
+
+/* ---------- callouts (authored as <div class="..."> in markdown) ---------- */
+
+.key-message,
+.takeaway,
+.action-item {
+  border-radius: 12px;
+  padding: 20px 24px;
+  margin: 30px 0;
+}
+.key-message {
+  border: 1px solid var(--info-line);
+  background: var(--info-tint);
+}
+.takeaway,
+.action-item {
+  border: 1px solid var(--warning-line);
+  background: var(--warning-tint);
+}
+.key-message > :first-child,
+.takeaway > :first-child,
+.action-item > :first-child {
+  margin-top: 0;
+}
+.key-message > :last-child,
+.takeaway > :last-child,
+.action-item > :last-child {
+  margin-bottom: 0;
+}
+.key-message::before,
+.takeaway::before,
+.action-item::before {
+  display: block;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+.key-message::before {
+  content: 'Key message';
+  color: var(--info);
+}
+.takeaway::before {
+  content: 'Key takeaway';
+  color: var(--warning);
+}
+.action-item::before {
+  content: '⚑ Action required';
+  color: var(--warning);
+}
+.key-message p,
+.takeaway p,
+.action-item p {
+  color: var(--ink);
+  margin: 8px 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
   }
 }

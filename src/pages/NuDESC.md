@@ -1,13 +1,12 @@
 ---
-layout: '../layouts/Layout.astro'
+layout: '../layouts/PageLayout.astro'
 title: NuDESC Screening Tip Sheet
 ---
 
 # NuDESC Screening Alert
 
-<div class="admonition info"> 
-<h2 class="admonition title">This patient has screened positive for delirium.</h2>
-(i.e., their Nursing Delirium Screening Scale [NuDESC] score is 2 or greater.)
+<div class="key-message">
+<p><strong>This patient has screened positive for delirium</strong> (i.e., their Nursing Delirium Screening Scale [NuDESC] score is 2 or greater).</p>
 </div>
 
 ## What is Delirium?
@@ -140,80 +139,3 @@ Learn more at:
 
 - Delirium toolkit items (useful for distraction, avoidance of restraints) will soon be available for nursing staff to order through central supply.
 - The Cerner "Delirium Powerplan" is being built, but it is not yet live.
-
----
-
-<style>
-  :root {
-    --primary-color: #2c3e50;
-    --secondary-color: #34495e;
-    --accent-color: #3498db;
-    --background-color: #f9f9f9;
-  }
-
-   a:not(.nav-link) {
-    text-decoration: none;
-    color: var(--color-secondary);
-}
-
-  body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    color: var(--primary-color);
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
-    background-color: var(--background-color);
-  }
-
-
-  h1,
-  h2
- {
-    color: var(--accent-color);
-    border-bottom: 2px solid var(--accent-color);
-    padding-top: 10px;
-    padding-bottom: 5px;
-    margin-bottom: 15px;
-  }
-
-  h3 {
-    padding-top: 8px;
-    padding-bottom: 5px;
-    margin-bottom: 10px;
-  }
-
- ul li {
-    margin-bottom: 5px;
-}
-
-img {
-  max-width: 100%;
-  height: auto;
-}
-
-.admonition.info {
-    color: #31708f;
-    background-color: #d9edf7;
-    border-left: 5px solid #00b8d4;
-    padding: 15px 20px;
-    border-radius: 4px;
-    margin-bottom: 20px;
-    box-shadow: 0 0.2rem 0.5rem rgba(0,0,0,0.05);
-}
-
-.admonition.info::before {
-    content: "ℹ️";
-    color: royalblue;
-    filter: sepia(1) saturate(3) hue-rotate(180deg);
-}
-
-.admonition.info .admonition-title {
-    font-weight: bold;
-    background-color: #d9edf7;
-    padding: 10px 20px;
-    margin: -15px -20px 15px -20px;
-    border-radius: 4px 4px 0 0;
-}
-
-</style>

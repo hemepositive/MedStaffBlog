@@ -1,9 +1,5 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import Features from '../components/Features.astro';
-import Card from '../components/Card.astro';
-// import Showcase from '../components/Showcase.astro';
-// import Tabs from '../components/Tabs.astro';
 
 const staffData = [
   {
@@ -40,42 +36,54 @@ const staffData = [
 ];
 ---
 
-<Layout>
-  <!-- <Showcase showExtra={true} /> -->
-
-  <section class="page-content">
-    <div class="container">
-      <h2>The HH Medical Staff Office</h2>
-    </div>
-  </section>
-
-  <section class="features">
-    <div class="container">
+<Layout title="The HH Medical Staff Office">
+  <div class="container staff">
+    <h1>The HH Medical Staff Office</h1>
+    <div class="grid">
       {
         staffData.map((person) => (
-          <Card>
-            <h4>{person.name}</h4>
-            <p>{person.title}</p>
-            <p>{person.phone}</p>
-          </Card>
+          <div class="person">
+            <h3>{person.name}</h3>
+            <p class="role">{person.title}</p>
+            <p class="phone num">{person.phone}</p>
+          </div>
         ))
       }
     </div>
-  </section>
+  </div>
 </Layout>
 
 <style>
-  .features .container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 20px;
-    padding: 0 20px;
-    margin: 30px auto;
+  .staff {
+    padding-top: 48px;
   }
-
-  @media (max-width: 500px) {
-    .features .container {
-      grid-template-columns: 1fr;
-    }
+  h1 {
+    font-size: clamp(26px, 4vw, 34px);
+    letter-spacing: -0.015em;
+  }
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    margin-top: 32px;
+  }
+  .person {
+    background: var(--surface-raised);
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    padding: 22px 24px;
+    box-shadow: var(--shadow);
+  }
+  .person h3 {
+    font-size: 17px;
+  }
+  .role {
+    font-size: 14px;
+    color: var(--muted);
+    margin: 4px 0 10px;
+  }
+  .phone {
+    font-weight: 600;
+    color: var(--brand-ink);
   }
 </style>
