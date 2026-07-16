@@ -2,6 +2,14 @@
 
 Website built with Astro from an example: [YouTube crash course](https://youtu.be/Oi9z5gfIHJs).
 
+## Requesting content updates via a coding assistant
+
+Non-technical staff asking a coding assistant (GitHub Copilot, Claude, etc.)
+to post a news update or add/update a resource page should read
+[instructions.md](instructions.md) first — it explains categories, importance
+levels ("Needs your attention," pinned banners), and how to phrase the
+request.
+
 ## Usage
 
 All commands are run from the root of the project, from a terminal:

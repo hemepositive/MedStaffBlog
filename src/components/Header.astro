@@ -7,6 +7,13 @@ const links = [
   { href: '/education', label: 'Education' },
 ];
 const isActive = (href: string) => (href === '/' ? path === '/' : path.startsWith(href));
+const resourceLinks = [
+  { href: '/leadership', label: 'Medical Staff Leadership' },
+  { href: '/staff', label: 'Medical Staff Office' },
+  { href: '/burnout', label: 'Burnout Help' },
+  { href: '/NuDESC', label: 'NuDESC Tip Sheet' },
+];
+const resourcesActive = resourceLinks.some((l) => isActive(l.href));
 ---
 
 <header class="site-header">
@@ -19,6 +26,17 @@ const isActive = (href: string) => (href === '/' ? path === '/' : path.startsWit
       {links.map((l) => (
         <a href={l.href} class:list={[{ active: isActive(l.href) }]}>{l.label}</a>
       ))}
+      <details class="resources-menu">
+        <summary class:list={[{ active: resourcesActive }]}>
+          Resources
+          <span class="chevron" aria-hidden="true">⌄</span>
+        </summary>
+        <ul>
+          {resourceLinks.map((l) => (
+            <li><a href={l.href} class:list={[{ active: isActive(l.href) }]}>{l.label}</a></li>
+          ))}
+        </ul>
+      </details>
     </nav>
     <button class="search-trigger" id="search-open" aria-label="Search the site">
       <span aria-hidden="true">⌕</span>
@@ -98,6 +116,70 @@ const isActive = (href: string) => (href === '/' ? path === '/' : path.startsWit
     background: var(--brand-tint);
     font-weight: 600;
   }
+  .resources-menu {
+    position: relative;
+  }
+  .resources-menu summary {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 15px;
+    font-weight: 500;
+    padding: 7px 13px;
+    border-radius: 8px;
+    color: var(--body);
+    white-space: nowrap;
+    cursor: pointer;
+    list-style: none;
+  }
+  .resources-menu summary::-webkit-details-marker {
+    display: none;
+  }
+  .resources-menu summary:hover {
+    background: var(--surface-sunken);
+    color: var(--ink);
+  }
+  .resources-menu summary.active {
+    color: var(--brand-ink);
+    background: var(--brand-tint);
+    font-weight: 600;
+  }
+  .resources-menu .chevron {
+    font-size: 12px;
+    transition: transform 0.15s ease;
+  }
+  .resources-menu[open] .chevron {
+    transform: rotate(180deg);
+  }
+  .resources-menu ul {
+    position: fixed;
+    z-index: 60;
+    list-style: none;
+    min-width: 220px;
+    background: var(--surface-raised);
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    box-shadow: 0 12px 32px rgba(15, 23, 42, 0.14);
+    padding: 6px;
+  }
+  .resources-menu li a {
+    display: block;
+    font-size: 14px;
+    font-weight: 500;
+    padding: 8px 10px;
+    border-radius: 7px;
+    color: var(--body);
+    white-space: nowrap;
+  }
+  .resources-menu li a:hover {
+    background: var(--surface-sunken);
+    color: var(--ink);
+    text-decoration: none;
+  }
+  .resources-menu li a.active {
+    color: var(--brand-ink);
+    font-weight: 600;
+  }
   .search-trigger {
     margin-left: auto;
     display: flex;
@@ -168,5 +250,33 @@ const isActive = (href: string) => (href === '/' ? path === '/' : path.startsWit
     const next = current === 'dark' ? 'light' : 'dark';
     root.dataset.theme = next;
     localStorage.setItem('theme', next);
+  });
+
+  const resourcesMenu = document.querySelector<HTMLDetailsElement>('.resources-menu');
+  const resourcesSummary = resourcesMenu?.querySelector('summary');
+  const resourcesPanel = resourcesMenu?.querySelector<HTMLUListElement>('ul');
+
+  function positionResourcesPanel() {
+    if (!resourcesSummary || !resourcesPanel) return;
+    const rect = resourcesSummary.getBoundingClientRect();
+    const maxLeft = window.innerWidth - resourcesPanel.offsetWidth - 8;
+    resourcesPanel.style.top = `${rect.bottom + 6}px`;
+    resourcesPanel.style.left = `${Math.min(rect.left, Math.max(maxLeft, 8))}px`;
+  }
+
+  resourcesMenu?.addEventListener('toggle', () => {
+    if (resourcesMenu.open) positionResourcesPanel();
+  });
+  window.addEventListener('resize', () => {
+    if (resourcesMenu?.open) positionResourcesPanel();
+  });
+
+  document.addEventListener('click', (e) => {
+    if (resourcesMenu?.open && !resourcesMenu.contains(e.target as Node)) {
+      resourcesMenu.open = false;
+    }
+  });
+  resourcesMenu?.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') resourcesMenu.open = false;
   });
 </script>

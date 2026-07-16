@@ -27,6 +27,13 @@ export function isPinned(post: Post): boolean {
   return post.data.pinned;
 }
 
+/** Unlike attention flags, announcements are time-sensitive and drop off after 12 months. */
+export function isRecent(post: Post): boolean {
+  const twelveMonthsAgo = new Date();
+  twelveMonthsAgo.setUTCMonth(twelveMonthsAgo.getUTCMonth() - 12);
+  return post.data.date.getTime() >= twelveMonthsAgo.getTime();
+}
+
 export async function getPostsNewestFirst(): Promise<Post[]> {
   const posts = await getCollection('posts');
   return posts.sort((a, b) => b.data.date.getTime() - a.data.date.getTime());

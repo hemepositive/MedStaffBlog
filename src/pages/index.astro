@@ -7,6 +7,7 @@ import {
   byCategory,
   isAttention,
   isPinned,
+  isRecent,
   postUrl,
   formatMonth,
 } from '../lib/posts';
@@ -16,7 +17,9 @@ const pinned = posts.filter((p) => isPinned(p));
 // Newest 4 flagged posts get cards; older flagged posts keep their
 // "Attention" chip in the streams below (flags never expire by date).
 const attention = posts.filter((p) => isAttention(p)).slice(0, 4);
-const announcements = byCategory(posts, 'announcements').slice(0, 3);
+// Unlike attention flags, announcements are time-sensitive: older than
+// 12 months drops off the homepage list entirely.
+const announcements = byCategory(posts, 'announcements').filter((p) => isRecent(p)).slice(0, 3);
 ---
 
 <Layout title="HH Medical Staff News">
@@ -48,9 +51,9 @@ const announcements = byCategory(posts, 'announcements').slice(0, 3);
       <StreamList title="Education & CME" posts={byCategory(posts, 'education')} href="/education" dot="var(--edu)" />
     </div>
 
-    {announcements.length > 0 && (
-      <section class="announcements">
-        <p class="zone-label">Announcements</p>
+    <section class="announcements">
+      <p class="zone-label">Announcements</p>
+      {announcements.length > 0 ? (
         <ul>
           {announcements.map((post) => (
             <li>
@@ -59,9 +62,11 @@ const announcements = byCategory(posts, 'announcements').slice(0, 3);
             </li>
           ))}
         </ul>
-        <a class="view-all" href="/announcements">All announcements →</a>
-      </section>
-    )}
+      ) : (
+        <p class="empty-state">Nothing new to announce right now.</p>
+      )}
+      <a class="view-all" href="/announcements">All announcements →</a>
+    </section>
   </div>
 </Layout>
 
@@ -130,6 +135,11 @@ const announcements = byCategory(posts, 'announcements').slice(0, 3);
     font-size: 13px;
     color: var(--muted);
     flex: none;
+  }
+  .empty-state {
+    padding: 12px 2px;
+    color: var(--muted);
+    font-size: 14px;
   }
   .view-all {
     display: inline-block;

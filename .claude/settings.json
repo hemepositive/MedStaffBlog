@@ -9,7 +9,11 @@
       "WebFetch(domain:medicalstaffnews.com)",
       "Bash(rm /Users/uxorious/hh_newsletter/MedStaffBlog/src/pages/it-updates.md)",
       "Bash(npm run *)",
-      "Edit(/.claude/skills/publish-post/**)"
+      "Edit(/.claude/skills/publish-post/**)",
+      "Skill(run)",
+      "Skill(run:*)",
+      "Bash(npx --yes playwright install chromium --dry-run)",
+      "Bash(node check-resources-menu.mjs)"
     ]
   }
 }
