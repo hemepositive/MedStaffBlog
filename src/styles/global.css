@@ -5,21 +5,21 @@
    ========================================================================== */
 
 :root {
-  --surface: #f8fafc;
+  --surface: #faf6ef;
   --surface-raised: #ffffff;
-  --surface-sunken: #f1f5f9;
-  --ink: #0f172a;
-  --body: #334155;
-  --muted: #64748b;
-  --line: #e2e8f0;
-  --brand: #0f766e;
-  --brand-ink: #115e59;
-  --brand-tint: #ccfbf1;
+  --surface-sunken: #f2ecdf;
+  --ink: #2b2418;
+  --body: #6b5c47;
+  --muted: #8a8070;
+  --line: #e7ddcc;
+  --brand: #0f5952;
+  --brand-ink: #0d5c50;
+  --brand-tint: #dbeee9;
   --critical: #b91c1c;
   --critical-tint: #fef2f2;
-  --warning: #b45309;
-  --warning-tint: #fffbeb;
-  --warning-line: #fde68a;
+  --warning: #b0491f;
+  --warning-tint: #fdf1e3;
+  --warning-line: #ecd3b4;
   --info: #1d4ed8;
   --info-tint: #eff6ff;
   --info-line: #bfdbfe;
@@ -85,21 +85,21 @@
 }
 
 :root[data-theme='light'] {
-  --surface: #f8fafc;
+  --surface: #faf6ef;
   --surface-raised: #ffffff;
-  --surface-sunken: #f1f5f9;
-  --ink: #0f172a;
-  --body: #334155;
-  --muted: #64748b;
-  --line: #e2e8f0;
-  --brand: #0f766e;
-  --brand-ink: #115e59;
-  --brand-tint: #ccfbf1;
+  --surface-sunken: #f2ecdf;
+  --ink: #2b2418;
+  --body: #6b5c47;
+  --muted: #8a8070;
+  --line: #e7ddcc;
+  --brand: #0f5952;
+  --brand-ink: #0d5c50;
+  --brand-tint: #dbeee9;
   --critical: #b91c1c;
   --critical-tint: #fef2f2;
-  --warning: #b45309;
-  --warning-tint: #fffbeb;
-  --warning-line: #fde68a;
+  --warning: #b0491f;
+  --warning-tint: #fdf1e3;
+  --warning-line: #ecd3b4;
   --info: #1d4ed8;
   --info-tint: #eff6ff;
   --info-line: #bfdbfe;
