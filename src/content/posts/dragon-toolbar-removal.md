@@ -5,7 +5,6 @@ excerpt: Launching Dragon from the PowerChart toolbar sends dictation to the Dic
 date: 2026-06-01
 author: HH Information Technology
 category: it-ehr
-urgency: warning
 effectiveDate: 2026-06-01
 ---
 

@@ -13,7 +13,18 @@
       "Skill(run)",
       "Skill(run:*)",
       "Bash(npx --yes playwright install chromium --dry-run)",
-      "Bash(node check-resources-menu.mjs)"
+      "Bash(node check-resources-menu.mjs)",
+      "Bash(mkdir -p /tmp/extract)",
+      "Bash(pandoc \"Uploads/cms_violent_restraints_v2.docx\" -t gfm --extract-media=/tmp/extract/restraints -o /tmp/extract/restraints.md)",
+      "Bash(pandoc \"Uploads/Social Worker Following Patient Smart Zone Alert.docx\" -t gfm --extract-media=/tmp/extract/smartzone -o /tmp/extract/smartzone.md)",
+      "Bash(brew list *)",
+      "Bash(pip3 show *)",
+      "Read(//private/tmp/extract/**)",
+      "Read(//tmp/extract/**)",
+      "Bash(cp /tmp/extract/smartzone/media/image1.png \"/Users/uxorious/hh_newsletter/MedStaffBlog/public/images/social-worker-smart-zone-alert/powerform-social-worker-following.png\")",
+      "Bash(cp /tmp/extract/smartzone/media/image2.png \"/Users/uxorious/hh_newsletter/MedStaffBlog/public/images/social-worker-smart-zone-alert/smart-zone-alert-banner.png\")",
+      "Read(//private/tmp/**)",
+      "Bash(pkill -f \"astro preview\")"
     ]
   }
 }
