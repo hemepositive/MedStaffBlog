@@ -15,7 +15,7 @@ Here are additional resources to meet with upcoming DEA training requirement. Th
 
 Create an account and search for courses under opioid/controlled substance categories. Some courses are free; Others range from $50-100 with up to 1.0 AMA PRA Category 1 Credit ™
 
-<a aria-label="Open P D F file" href="/files/MATE_Act_Training_June 24th.pdf">MASA Substance Use Disorder Training - June 24, 2023</a>
+<a aria-label="Open P D F file" href="/files/MATE_Act_Training_June24th.pdf">MASA Substance Use Disorder Training - June 24, 2023</a>
 
 [Other MASA Training Courses](https://alamedical.inreachce.com)
 

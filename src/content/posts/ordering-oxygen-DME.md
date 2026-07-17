@@ -16,9 +16,7 @@ The following options were changed in the DME oxygen orders to give the patients
 - Oxygen Portable Gas System w/conserving device
 - Oxygen Portable Gas System continuous
 
-<div class="image-container">
-  <img src="/OxygenDMEOrder.PNG" alt="A photo of DME Order.">
-</div>
+![The DME oxygen order in the EHR, showing the new portable oxygen options.](/images/ordering-oxygen-DME/OxygenDMEOrder.png)
 
 Explanation of the types of Oxygen in the new order:
 
@@ -26,12 +24,3 @@ Explanation of the types of Oxygen in the new order:
 - Portable Oxygen Concentrator continuous = a POC that delivers continuous oxygen
 - Oxygen Portable Gas System w/conserving device = Smaller B tanks
 - Oxygen Portable Gas System continuous = Standard larger E tanks
-
-<style>
-.image-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-</style>
