@@ -72,22 +72,26 @@ PCA uses a computerized pump to deliver IV analgesia on the patient's own schedu
 
 Routine use of basal continuous infusion is **not recommended** in adults and should be reserved for opioid-tolerant patients or those with a specific ICP indication. Basal rates increase the risk of nocturnal over-sedation and respiratory depression. Continuous pulse oximetry is **mandatory** for any patient on a basal rate, and recommended for the first 24 hours for all patients on PCA regardless of basal use.
 
-Opioid tolerance is defined as **≥ 60 OME/day for ≥ 7 days**.
+Opioid tolerance is defined in the PowerPlan as **≥ 60 mg oral morphine equivalents per day**.
 
-### Starting regimens — opioid-naïve (non-tolerant) adults
+### PCA order set — fixed dosing by drug and tolerance status
 
-| Parameter | 1st line: HYDROmorphone | 2nd line: MORphine |
-| --------- | ----------------------- | ------------------ |
-| Demand dose | 0.4–1 mg (0.01–0.03 mg/kg) | 2 mg (0.02–0.03 mg/kg) |
-| Lockout | 10 min | 10 min |
-| 1-hour maximum | 4 mg | 10 mg |
-| Starting basal rate | None, or 0.1–0.4 mg/hr | None, or 1–2 mg/hr |
+The PowerPlan does not offer a provider-adjustable dosing range; each order fires with a fixed demand dose, lockout, hourly limit, and (where applicable) continuous rate. Morphine and Dilaudid (hydromorphone) PCA orders are presented as parallel options in the order set — selection is driven by clinical judgment/allergy history, not a first-line/second-line hierarchy.
+
+| Parameter | Morphine PCA — not tolerant | Morphine PCA — tolerant | Dilaudid PCA — not tolerant | Dilaudid PCA — tolerant |
+| --------- | --------------------------- | ------------------------ | ---------------------------- | ------------------------ |
+| Demand dose | 1 mg | 1 mg | 0.2 mg | 0.2 mg |
+| Lockout | 10 min | 10 min | 10 min | 10 min |
+| 1-hour limit | 6 mg | 7 mg | 1.2 mg | 1.4 mg |
+| Continuous (basal) rate | 0 mg/hr (none) | 1 mg/hr | 0 mg/hr (none) | 0.2 mg/hr |
+
+**Breakthrough dosing while on PCA.** Each PCA order pairs with a fixed IV push order for severe breakthrough pain (score 8–10): morphine PCA pairs with morphine 2 mg IV push q5min PRN, not to exceed 10 mg every 2 hours; Dilaudid PCA pairs with Dilaudid 0.3 mg IV push q5min PRN, not to exceed 2 mg every 2 hours. This breakthrough order is meant to run alongside an active PCA — it is not the same as the intermittent IV pushes this guide advises against using to bridge a patient already transitioned to oral medication.
 
 ### Starting regimens — opioid-tolerant adults
 
 - Review the patient's home opioid regimen and the regimen used at prior hospitalizations.
 - Consider initiating at the PCA dose used during the most recent prior hospitalization.
-- PCA dosing is generally tiered by home OME: lower starting dose for < 60 OME/day, higher starting dose for > 60 OME/day.
+- PCA dosing is tiered by home OME: the "not tolerant" order for patients under 60 mg oral morphine equivalents/day, the "tolerant" order (with continuous basal rate) for patients at or above 60 mg oral morphine equivalents/day.
 - Engage pharmacy early for PCA initiation, titration, and the transition to oral pain medication.
 
 Useful calculators: [MDCalc Morphine Milligram Equivalents](https://www.mdcalc.com/calc/10170/morphine-milligram-equivalents-mme-calculator) and [StatPearls, "Opioid Equivalency"](https://www.ncbi.nlm.nih.gov/books/NBK441913/). Note that hydromorphone and morphine potency differ substantially — 1 mg IV hydromorphone ≈ 6.6 mg IV morphine; 0.4 mg IV hydromorphone ≈ 2.6 mg IV morphine. **Confirm any conversion with pharmacy.**
@@ -96,9 +100,13 @@ Useful calculators: [MDCalc Morphine Milligram Equivalents](https://www.mdcalc.c
 
 Review PCA use history and the nursing record regularly: number of attempted actuations (button presses, including those blocked by lockout), number of delivered doses, and total medication administered. Combine numeric pain scores with **functional** pain assessment — ability to cough, take a deep breath, and rest comfortably.
 
+### How to check PCA use history
+
+You can query the pump directly by going through its menus to see how many demand doses the patient requested versus how many were actually delivered. The nurses can show you how to navigate those menus. This information is also generally documented in the nursing record at the end of every shift.
+
 ### Adverse effects to monitor
 
-- **Over-sedation / respiratory depression** — order continuous end-tidal CO₂ monitoring if respiratory rate < 12.
+- **Over-sedation / respiratory depression** — consider continuous end-tidal CO₂ monitoring for patients on high-dose PCA (per order set); the Narcan/naloxone order is 0.1 mg IV push q1min PRN for RR < 7, apnea, or over-sedation (POSS = 4), max 0.4 mg.
 - **Constipation** — scheduled stimulant laxative plus osmotic stool softener (pre-checked by default in the order set).
 - Urinary retention, pruritus/itching, hypotension, insomnia, nausea/vomiting.
 
@@ -179,8 +187,8 @@ Vaso-occlusive crisis management differs for every patient with sickle cell dise
 | First dose | Within 60 min of arrival; use the ICP if one exists. |
 | Non-opioid analgesia | Scheduled acetaminophen + ibuprofen/naproxen for 5–7 days (not PRN); check renal function first. |
 | Opioid route | PCA preferred; avoid intermittent IV pushes. Basal rate only if opioid-tolerant or ICP-directed. |
-| PCA start (naïve) | Hydromorphone 0.4–1 mg / 10-min lockout (1st line); morphine 2 mg / 10-min lockout (2nd line). |
-| Monitoring | Continuous pulse oximetry (mandatory with basal rate); end-tidal CO₂ if RR < 12; scheduled bowel regimen. |
+| PCA start (naïve) | Fixed PowerPlan doses: morphine 1 mg / 10-min lockout / 6 mg 1-hr limit; Dilaudid 0.2 mg / 10-min lockout / 1.2 mg 1-hr limit. No basal rate. |
+| Monitoring | Continuous pulse oximetry (mandatory with basal rate); consider end-tidal CO₂ for high-dose PCA; scheduled bowel regimen. |
 | Transfusion | Not for uncomplicated pain crisis; reserve for stroke, severe ACS, multi-organ failure, fat embolism, Hb drop > 2 g/dL, or sequestration. |
 | ACS prevention | Incentive spirometry, 10 breaths/hour while awake; heat therapy, not ice. |
 | Transition to oral | After 24 h of stable control with minimal demand doses; wean basal first, continue bolus 24 h; monitor for withdrawal. |
