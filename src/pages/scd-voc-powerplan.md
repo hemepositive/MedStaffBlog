@@ -55,6 +55,8 @@ PCA uses a computerized pump to deliver IV analgesia on the patient's own schedu
 
 **Prefer PCA over intermittent IV pushes.** Start with PCA, then transition to oral medication — do not "bridge" a patient who has already transitioned to oral meds with intermittent IV pushes. If pain becomes uncontrolled, restart the PCA instead.
 
+![PCA demand dosing vs. IV push: timing to peak effect and duration of analgesia](/images/scd-voc-powerplan/pca-vs-iv-push.jpg)
+
 ### PCA components
 
 - **Demand dose** — an opioid bolus delivered on patient request through a button, subject to a fixed lockout interval.
