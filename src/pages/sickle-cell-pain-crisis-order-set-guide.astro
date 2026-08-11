@@ -1,0 +1,43 @@
+---
+import Layout from '../layouts/Layout.astro';
+import OrderSetDiagram from '../components/OrderSetDiagram.astro';
+---
+
+<Layout title="HOSP Sickle Cell Crisis Orders — Order-Set Guide" description="Click-through guide to the HOSP Sickle Cell Crisis Orders power plan.">
+  <div class="page container">
+    <article class="prose">
+      <p class="kicker">Part 3 of the <a href="/sickle-cell-pain-crisis">HOSP Sickle Cell Crisis Orders Guide</a></p>
+      <h1>HOSP Sickle Cell Crisis Orders — Order-Set Guide</h1>
+      <p class="page-sub">How to work through the <strong>HOSP Sickle Cell Crisis Orders</strong> power plan — colored callouts show which decision maps to which section of the EHR screen.</p>
+
+      <OrderSetDiagram />
+
+      <hr />
+      <p><strong>Back:</strong> <a href="/sickle-cell-pain-crisis-pca">← PCA clinical guide</a></p>
+      <p><strong>Or:</strong> <a href="/sickle-cell-pain-crisis">← Main HOSP Sickle Cell Crisis Orders guide</a></p>
+    </article>
+  </div>
+</Layout>
+
+<style>
+  .page {
+    padding-top: 44px;
+    padding-bottom: 48px;
+  }
+  .page :global(.prose) {
+    margin: 0 auto;
+    max-width: 960px;
+  }
+  .kicker {
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--muted);
+    margin: 0 0 8px;
+  }
+  .page-sub {
+    color: var(--body);
+    max-width: 60ch;
+  }
+</style>

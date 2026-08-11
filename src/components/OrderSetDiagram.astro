@@ -1,0 +1,387 @@
+---
+// Annotated walkthrough of the HOSP Sickle Cell Crisis Orders power plan:
+// colored callouts map decision text to the matching region of the EHR screen.
+// Arrows are drawn client-side (see <script> below) so they stay pinned to
+// the callout/marker elements across reflow and screen widths.
+---
+
+<div class="diagram" id="diagram">
+  <div class="flow-col">
+    <div class="callout callout--a" id="boxA">
+      <p class="callout-title">A. Select a non-opioid</p>
+    </div>
+
+    <div class="callout callout--b" id="boxB">
+      <p class="callout-lead">B. Select either — not both:</p>
+      <ol class="decision-list">
+        <li class="item item--pca" id="itemPca">
+          <span class="item-num">1.</span> PCA
+        </li>
+        <li class="item item--parent">
+          <span class="item-num">2.</span> Oral &amp; IV PRN
+          <ol class="sub-list">
+            <li class="item item--oral" id="itemOral">
+              <span class="item-letter">a.</span> Oral meds for moderate and severe pain are linked — selecting one automatically selects the matching dose, so pick a single medication.
+            </li>
+            <li class="item item--iv" id="itemIv">
+              <span class="item-letter">b.</span> IV severe breakthrough pain
+            </li>
+          </ol>
+        </li>
+      </ol>
+    </div>
+
+    <p class="flow-footnote">Arrows point to the exact section of the order set each decision applies to.</p>
+  </div>
+
+  <div class="image-col">
+    <div class="panel-wrap">
+      <img class="panel-img" alt="Analgesics: Non-Opioids and PCA Orders sections" src="/images/sickle-cell-pain-crisis/order-set-panel-1.png" />
+      <span class="marker marker--orange" id="targetNonOpioid" style="top:14.6%"></span>
+      <span class="marker marker--green" id="targetPca" style="top:54.9%"></span>
+    </div>
+
+    <div class="panel-continued">&hellip; continued &hellip;</div>
+
+    <div class="panel-wrap">
+      <img class="panel-img" alt="Analgesics: Opioids — Moderate and Severe pain rules" src="/images/sickle-cell-pain-crisis/order-set-panel-2.png" />
+      <span class="marker marker--blue" id="targetOral" style="top:26.7%"></span>
+    </div>
+
+    <div class="panel-continued">&hellip; continued &hellip;</div>
+
+    <div class="panel-wrap">
+      <img class="panel-img" alt="Severe Breakthrough Pain section" src="/images/sickle-cell-pain-crisis/order-set-panel-3.png" />
+      <span class="marker marker--blue" id="targetIv" style="top:14%"></span>
+    </div>
+  </div>
+
+  <svg class="arrow-overlay" id="arrowOverlay">
+    <defs>
+      <marker id="head-orange" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+        <path d="M0,0 L10,5 L0,10 z" fill="var(--order-set-orange)"></path>
+      </marker>
+      <marker id="head-green" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+        <path d="M0,0 L10,5 L0,10 z" fill="var(--order-set-green)"></path>
+      </marker>
+      <marker id="head-blue" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+        <path d="M0,0 L10,5 L0,10 z" fill="var(--order-set-blue)"></path>
+      </marker>
+    </defs>
+  </svg>
+</div>
+
+<section class="legend" aria-label="Legend">
+  <h2>Key</h2>
+  <ul>
+    <li><span class="legend-swatch legend-swatch--orange"></span>Non-opioid selection</li>
+    <li><span class="legend-swatch legend-swatch--green"></span>PCA pathway</li>
+    <li><span class="legend-swatch legend-swatch--blue"></span>Oral &amp; IV PRN pathway (moderate/severe oral meds and IV breakthrough dosing)</li>
+  </ul>
+  <p class="legend-note">Screens shown are cropped from the live EHR order set for reference. Always confirm against the current build before ordering.</p>
+</section>
+
+<script>
+  function initDiagram() {
+    const diagram = document.getElementById('diagram');
+    const svg = document.getElementById('arrowOverlay') as SVGSVGElement | null;
+    if (!diagram || !svg) return;
+
+    const arrows = [
+      { from: 'boxA', to: 'targetNonOpioid', color: 'var(--order-set-orange)', marker: 'head-orange' },
+      { from: 'itemPca', to: 'targetPca', color: 'var(--order-set-green)', marker: 'head-green' },
+      { from: 'itemOral', to: 'targetOral', color: 'var(--order-set-blue)', marker: 'head-blue' },
+      { from: 'itemIv', to: 'targetIv', color: 'var(--order-set-blue)', marker: 'head-blue' },
+    ];
+
+    function pointFor(el: Element, side: 'left' | 'right') {
+      const r = el.getBoundingClientRect();
+      const c = diagram!.getBoundingClientRect();
+      const y = r.top - c.top + r.height / 2;
+      const x = side === 'right' ? r.right - c.left : r.left - c.left;
+      return { x, y };
+    }
+
+    function draw() {
+      const rect = diagram!.getBoundingClientRect();
+      svg!.setAttribute('width', String(rect.width));
+      svg!.setAttribute('height', String(rect.height));
+      svg!.style.width = rect.width + 'px';
+      svg!.style.height = rect.height + 'px';
+
+      svg!.querySelectorAll('path.arrow-path').forEach((p) => p.remove());
+
+      arrows.forEach((a) => {
+        const fromEl = document.getElementById(a.from);
+        const toEl = document.getElementById(a.to);
+        if (!fromEl || !toEl) return;
+        const p1 = pointFor(fromEl, 'right');
+        const p2 = pointFor(toEl, 'left');
+        const dx = Math.max(60, (p2.x - p1.x) * 0.45);
+        const c1x = p1.x + dx,
+          c1y = p1.y;
+        const c2x = p2.x - dx,
+          c2y = p2.y;
+        const d = `M ${p1.x} ${p1.y} C ${c1x} ${c1y}, ${c2x} ${c2y}, ${p2.x - 6} ${p2.y}`;
+        const path = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+        path.setAttribute('d', d);
+        path.setAttribute('class', 'arrow-path');
+        path.setAttribute('fill', 'none');
+        path.setAttribute('stroke', a.color);
+        path.setAttribute('stroke-width', '2.5');
+        path.setAttribute('marker-end', `url(#${a.marker})`);
+        svg!.appendChild(path);
+      });
+    }
+
+    window.addEventListener('resize', draw);
+    draw();
+    Array.prototype.slice.call(document.images).forEach((img: HTMLImageElement) => {
+      if (img.complete) return;
+      img.addEventListener('load', draw);
+    });
+    setTimeout(draw, 50);
+    setTimeout(draw, 300);
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initDiagram);
+  } else {
+    initDiagram();
+  }
+</script>
+
+<style>
+  .diagram {
+    --order-set-orange: #e8830c;
+    --order-set-green: #2e9e5b;
+    --order-set-blue: #2f6fb3;
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    gap: 40px;
+    margin: 32px 0;
+  }
+
+  .flow-col {
+    flex: 0 0 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding-top: 40px;
+  }
+
+  .image-col {
+    flex: 1 1 auto;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .panel-wrap {
+    position: relative;
+    border: 1px solid var(--line);
+    border-radius: 6px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    background: var(--surface-raised);
+  }
+  .panel-img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+  .panel-continued {
+    text-align: center;
+    font-size: 0.75rem;
+    font-style: italic;
+    color: var(--muted);
+    padding: 6px 0;
+  }
+
+  .marker {
+    position: absolute;
+    left: 0;
+    width: 0;
+    height: 0;
+    transform: translate(-1px, -50%);
+  }
+  .marker::before {
+    content: '';
+    position: absolute;
+    left: -3px;
+    top: -3px;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: currentColor;
+    border: 2px solid var(--surface-raised);
+  }
+  .marker--orange {
+    color: var(--order-set-orange);
+  }
+  .marker--green {
+    color: var(--order-set-green);
+  }
+  .marker--blue {
+    color: var(--order-set-blue);
+  }
+
+  .callout {
+    position: relative;
+    background: var(--surface-raised);
+    border-radius: 8px;
+    padding: 14px 16px;
+    box-shadow: var(--shadow);
+  }
+
+  .callout--a {
+    border: 2px solid var(--order-set-orange);
+  }
+  .callout-title {
+    margin: 0;
+    font-weight: 700;
+    font-size: 0.95rem;
+    color: var(--order-set-orange);
+  }
+
+  .callout--b {
+    border: 2px solid var(--ink);
+  }
+  .callout-lead {
+    margin: 0 0 8px;
+    font-weight: 700;
+    font-size: 0.95rem;
+    color: var(--ink);
+  }
+
+  .decision-list,
+  .sub-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  .sub-list {
+    margin-top: 6px;
+    padding-left: 18px;
+  }
+
+  .item {
+    font-size: 0.9rem;
+    line-height: 1.4;
+    padding: 5px 0;
+    color: var(--body);
+  }
+  .item-num,
+  .item-letter {
+    font-weight: 700;
+    margin-right: 4px;
+  }
+
+  .item--pca {
+    color: var(--order-set-green);
+  }
+  .item--pca .item-num {
+    color: var(--order-set-green);
+  }
+
+  .item--parent {
+    color: var(--ink);
+  }
+  .item--parent .item-num {
+    color: var(--ink);
+  }
+
+  .item--oral,
+  .item--iv {
+    color: var(--order-set-blue);
+  }
+  .item--oral .item-letter,
+  .item--iv .item-letter {
+    color: var(--order-set-blue);
+  }
+
+  .flow-footnote {
+    margin: 0;
+    font-size: 0.8rem;
+    color: var(--muted);
+    font-style: italic;
+  }
+
+  .arrow-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    overflow: visible;
+  }
+  .arrow-path {
+    filter: drop-shadow(0 1px 0 rgba(0, 0, 0, 0.15));
+  }
+
+  .legend {
+    margin: 24px 0 0;
+    background: var(--surface-raised);
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    padding: 16px 20px;
+  }
+  .legend h2 {
+    font-size: 0.95rem;
+    margin: 0 0 10px;
+    color: var(--ink);
+  }
+  .legend ul {
+    list-style: none;
+    margin: 0 0 10px;
+    padding: 0;
+    display: flex;
+    gap: 24px;
+    flex-wrap: wrap;
+  }
+  .legend li {
+    font-size: 0.85rem;
+    color: var(--body);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .legend-swatch {
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    flex: none;
+  }
+  .legend-swatch--orange {
+    background: var(--order-set-orange);
+  }
+  .legend-swatch--green {
+    background: var(--order-set-green);
+  }
+  .legend-swatch--blue {
+    background: var(--order-set-blue);
+  }
+  .legend-note {
+    margin: 0;
+    font-size: 0.78rem;
+    color: var(--muted);
+    border-top: 1px solid var(--line);
+    padding-top: 10px;
+  }
+
+  @media (max-width: 860px) {
+    .diagram {
+      flex-direction: column;
+      gap: 16px;
+    }
+    .flow-col {
+      flex: none;
+      width: 100%;
+      padding-top: 0;
+    }
+    .arrow-overlay {
+      display: none;
+    }
+  }
+</style>
