@@ -4,7 +4,6 @@ excerpt: A refresher on 42 CFR § 482.13(e) requirements for physicians and APPs
 date: 2026-07-17
 author: Department of Compliance
 category: education
-urgency: warning
 ---
 
 A refresher on CMS Conditions of Participation requirements (42 CFR § 482.13(e)) for physicians and APPs ordering restraint or seclusion for violent or self-destructive behavior. These requirements apply to all Medicare/Medicaid-participating hospitals.

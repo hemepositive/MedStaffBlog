@@ -1,4 +1,6 @@
 ---
+import { resourceLinks, sepsisLinks } from '../lib/resources';
+
 const path = Astro.url.pathname;
 const links = [
   { href: '/', label: 'Home' },
@@ -7,14 +9,9 @@ const links = [
   { href: '/education', label: 'Education' },
 ];
 const isActive = (href: string) => (href === '/' ? path === '/' : path.startsWith(href));
-const resourceLinks = [
-  { href: '/leadership', label: 'Medical Staff Leadership' },
-  { href: '/staff', label: 'Medical Staff Office' },
-  { href: '/burnout', label: 'Burnout Help' },
-  { href: '/NuDESC', label: 'NuDESC Tip Sheet' },
-  { href: '/scd-voc-powerplan', label: 'Sickle Cell VOC Guide' },
-];
-const resourcesActive = resourceLinks.some((l) => isActive(l.href));
+const resourcesActive =
+  resourceLinks.some((l) => isActive(l.href)) || sepsisLinks.some((l) => isActive(l.href));
+const sepsisActive = sepsisLinks.some((l) => isActive(l.href));
 ---
 
 <header class="site-header">
@@ -36,6 +33,19 @@ const resourcesActive = resourceLinks.some((l) => isActive(l.href));
           {resourceLinks.map((l) => (
             <li><a href={l.href} class:list={[{ active: isActive(l.href) }]}>{l.label}</a></li>
           ))}
+          <li>
+            <details class="resources-submenu">
+              <summary class:list={[{ active: sepsisActive }]}>
+                Sepsis
+                <span class="chevron" aria-hidden="true">⌄</span>
+              </summary>
+              <ul>
+                {sepsisLinks.map((l) => (
+                  <li><a href={l.href} class:list={[{ active: isActive(l.href) }]}>{l.label}</a></li>
+                ))}
+              </ul>
+            </details>
+          </li>
         </ul>
       </details>
     </nav>
@@ -156,7 +166,7 @@ const resourcesActive = resourceLinks.some((l) => isActive(l.href));
     position: fixed;
     z-index: 60;
     list-style: none;
-    min-width: 220px;
+    min-width: 240px;
     background: var(--surface-raised);
     border: 1px solid var(--line);
     border-radius: 10px;
@@ -178,6 +188,61 @@ const resourcesActive = resourceLinks.some((l) => isActive(l.href));
     text-decoration: none;
   }
   .resources-menu li a.active {
+    color: var(--brand-ink);
+    font-weight: 600;
+  }
+  .resources-submenu summary {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 14px;
+    font-weight: 500;
+    padding: 8px 10px;
+    border-radius: 7px;
+    color: var(--body);
+    white-space: nowrap;
+    cursor: pointer;
+    list-style: none;
+  }
+  .resources-submenu summary::-webkit-details-marker {
+    display: none;
+  }
+  .resources-submenu summary:hover {
+    background: var(--surface-sunken);
+    color: var(--ink);
+  }
+  .resources-submenu summary.active {
+    color: var(--brand-ink);
+    font-weight: 600;
+  }
+  .resources-submenu .chevron {
+    font-size: 12px;
+    transition: transform 0.15s ease;
+  }
+  .resources-submenu[open] .chevron {
+    transform: rotate(180deg);
+  }
+  .resources-submenu ul {
+    list-style: none;
+    padding: 2px 0 2px 14px;
+    border-left: 2px solid var(--line);
+    margin: 2px 0 2px 12px;
+  }
+  .resources-submenu li a {
+    display: block;
+    font-size: 13.5px;
+    font-weight: 500;
+    padding: 7px 10px;
+    border-radius: 7px;
+    color: var(--body);
+    white-space: nowrap;
+  }
+  .resources-submenu li a:hover {
+    background: var(--surface-sunken);
+    color: var(--ink);
+    text-decoration: none;
+  }
+  .resources-submenu li a.active {
     color: var(--brand-ink);
     font-weight: 600;
   }

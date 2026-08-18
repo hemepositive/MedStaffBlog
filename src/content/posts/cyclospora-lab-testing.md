@@ -4,7 +4,6 @@ excerpt: The HH Lab now offers an in-house Cyclospora and Isospora stain on stoo
 date: 2026-07-27
 author: Jonathan White
 category: clinical
-urgency: critical
 ---
 
 The HH Lab has updated lab testing for Cyclospora. A **Cyclospora and Isospora stain** test is now orderable on stool specimens and will be performed in house Monday–Friday, day shift.
