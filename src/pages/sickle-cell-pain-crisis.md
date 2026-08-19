@@ -1,19 +1,19 @@
 ---
 layout: '../layouts/PageLayout.astro'
-title: 'Sickle Cell VOC PowerPlan Guide'
+title: 'HOSP Sickle Cell Crisis Orders Guide'
 ---
 
-# Sickle Cell Disease Vaso-Occlusive Crisis
+# HOSP Sickle Cell Crisis Orders
 
-_Adult inpatient PowerPlan guide — consolidated reference for hospitalists, APPs, and pharmacy._
+_Adult inpatient guide to the **HOSP Sickle Cell Crisis Orders** power plan — consolidated reference for hospitalists, APPs, and pharmacy. Part 1 of 3: this page, the [PCA guide](/sickle-cell-pain-crisis-pca), and the [order-set click-through guide](/sickle-cell-pain-crisis-order-set-guide)._
 
 <div class="key-message">
 
-This guide consolidates institutional PowerPlan tip sheets and PCA instructions into a single quick reference for hospitalists, advanced practice providers, and pharmacy staff managing hospitalized adults in acute sickle cell vaso-occlusive crisis (VOC).
+This guide consolidates institutional tip sheets and PCA instructions for the **HOSP Sickle Cell Crisis Orders** power plan into a single quick reference for hospitalists, advanced practice providers, and pharmacy staff managing hospitalized adults in acute sickle cell pain crisis.
 
 </div>
 
-**Scope.** Adult inpatients admitted for uncomplicated acute VOC. This guide does not replace an existing Individualized Care Plan (ICP), pharmacy consultation, or clinical judgment.
+**Scope.** Adult inpatients admitted for uncomplicated acute sickle cell pain crisis. This guide does not replace an existing Individualized Care Plan (ICP), pharmacy consultation, or clinical judgment.
 
 ## 1. Foundational Principles
 
@@ -27,7 +27,7 @@ This guide consolidates institutional PowerPlan tip sheets and PCA instructions 
 
 ## 2. Multimodal, Non-Opioid Analgesia
 
-Non-opioid analgesics should be **scheduled, not ordered PRN**, for the first 5–7 days of admission — most uncomplicated crises peak within 48–72 hours, and a steady state of anti-inflammatory therapy through resolution reduces total opioid requirement.
+Non-opioid analgesics should be **scheduled, not ordered PRN**, for the first 5 days of admission — most uncomplicated crises peak within 48–72 hours, and a steady state of anti-inflammatory therapy through resolution reduces total opioid requirement.
 
 - Scheduled **acetaminophen 1 g every 8 hours**.
 - Scheduled **ibuprofen 400–600 mg every 6–8 hours** (or naproxen), unless contraindicated by renal status or GI disease.
@@ -55,74 +55,19 @@ PCA uses a computerized pump to deliver IV analgesia on the patient's own schedu
 
 **Prefer PCA over intermittent IV pushes.** Start with PCA, then transition to oral medication — do not "bridge" a patient who has already transitioned to oral meds with intermittent IV pushes. If pain becomes uncontrolled, restart the PCA instead.
 
-### PCA components
+<div class="key-message">
 
-- **Demand dose** — an opioid bolus delivered on patient request through a button, subject to a fixed lockout interval.
-- **Lockout interval** — minimum time between demand doses; must be long enough for the prior dose to take effect.
-- **Basal rate** — a continuous background infusion independent of demand dosing.
+**Full PCA guidance** — components, contraindications, tolerance-based dosing tables, monitoring, and titration — has its own page so it gets the attention it needs:
 
-### Absolute contraindications to PCA
+**→ [Read the PCA guide](/sickle-cell-pain-crisis-pca)**
 
-- Patient unable to understand the PCA concept.
-- Decline in mental status with impending risk of airway compromise.
-- Allergy to the PCA-delivered opioid.
-- Infection at the PCA access site.
+Then continue to the **[order-set click-through guide](/sickle-cell-pain-crisis-order-set-guide)**, which shows exactly where these choices live in the **HOSP Sickle Cell Crisis Orders** power plan on the EHR screen.
 
-### Basal rates in adults
-
-Routine use of basal continuous infusion is **not recommended** in adults and should be reserved for opioid-tolerant patients or those with a specific ICP indication. Basal rates increase the risk of nocturnal over-sedation and respiratory depression. Continuous pulse oximetry is **mandatory** for any patient on a basal rate, and recommended for the first 24 hours for all patients on PCA regardless of basal use.
-
-Opioid tolerance is defined in the PowerPlan as **≥ 60 mg oral morphine equivalents per day**.
-
-### PCA order set — fixed dosing by drug and tolerance status
-
-The PowerPlan does not offer a provider-adjustable dosing range; each order fires with a fixed demand dose, lockout, hourly limit, and (where applicable) continuous rate. Morphine and Dilaudid (hydromorphone) PCA orders are presented as parallel options in the order set — selection is driven by clinical judgment/allergy history, not a first-line/second-line hierarchy.
-
-#### Initial PCA Settings (the same for opioid tolerant and non-tolerant for now)
-
-| Parameter               | Morphine PCA — not tolerant | Morphine PCA — tolerant | Dilaudid PCA — not tolerant | Dilaudid PCA — tolerant |
-| ----------------------- | --------------------------- | ----------------------- | --------------------------- | ----------------------- |
-| Demand dose             | 1 mg                        | 1 mg                    | 0.2 mg                      | 0.2 mg                  |
-| Lockout                 | 10 min                      | 10 min                  | 10 min                      | 10 min                  |
-| 4-hour limit            | 24 mg                       | 24 mg                   | 4.8 mg                      | 4.8 mg                  |
-| Continuous (basal) rate | 0 mg/hr (none)              | 0 mg/hr (none)          | 0 mg/hr (none)              | 0 mg/hr (none)          |
-
-**Breakthrough dosing while on PCA.** Each PCA order pairs with a fixed IV push order for severe breakthrough pain (score 8–10): morphine PCA pairs with morphine 2 mg IV push q5min PRN, not to exceed 10 mg every 2 hours; Dilaudid PCA pairs with Dilaudid 0.3 mg IV push q5min PRN, not to exceed 2 mg every 2 hours. This breakthrough order is meant to run alongside an active PCA — it is not the same as the intermittent IV pushes this guide advises against using to bridge a patient already transitioned to oral medication.
-
-### Starting regimens — opioid-tolerant adults
-
-- Review the patient's home opioid regimen and the regimen used at prior hospitalizations.
-- Consider initiating at the PCA dose used during the most recent prior hospitalization.
-- Engage pharmacy early for PCA initiation, titration, and the transition to oral pain medication.
-
-Useful calculators: [MDCalc Morphine Milligram Equivalents](https://www.mdcalc.com/calc/10170/morphine-milligram-equivalents-mme-calculator) and [StatPearls, "Opioid Equivalency"](https://www.ncbi.nlm.nih.gov/books/NBK441913/). Note that hydromorphone and morphine potency differ substantially — 1 mg IV hydromorphone ≈ 6.6 mg IV morphine; 0.4 mg IV hydromorphone ≈ 2.6 mg IV morphine. **Confirm any conversion with pharmacy.**
+</div>
 
 ## 4. Continuous Monitoring and Dose Titration
 
-Review PCA use history and the nursing record regularly: number of attempted actuations (button presses, including those blocked by lockout), number of delivered doses, and total medication administered. Combine numeric pain scores with **functional** pain assessment — ability to cough, take a deep breath, and rest comfortably.
-
-### How to check PCA use history
-
-You can query the pump directly by going through its menus to see how many demand doses the patient requested versus how many were actually delivered. The nurses can show you how to navigate those menus. This information is also generally documented in the nursing record at the end of every shift.
-
-### Adverse effects to monitor
-
-- **Over-sedation / respiratory depression** — consider continuous end-tidal CO₂ monitoring for patients on high-dose PCA (per order set); the Narcan/naloxone order is 0.1 mg IV push q1min PRN for RR < 7, apnea, or over-sedation (POSS = 4), max 0.4 mg.
-- **Constipation** — scheduled stimulant laxative plus osmotic stool softener (pre-checked by default in the order set).
-- Urinary retention, pruritus/itching, hypotension, insomnia, nausea/vomiting.
-
-### If over-sedated or showing respiratory depression
-
-- Hold all opioids until mental status improves.
-- Consider naloxone.
-- Optimize alternative non-opioid therapies (heat, acetaminophen, methocarbamol, temporary ibuprofen).
-- If continued PCA use is required, lower bolus/basal rates and/or lengthen the lockout interval.
-
-### If pain relief is inadequate
-
-- **Repeated end-of-lockout activations with otherwise adequate relief** → shorten the lockout interval (e.g., 10 min → 8 min).
-- **Consistent repeated actuations without relief** → escalate the demand dose by 25-50% for somewhat unrelieved pain, or 75-100% for completely uncontrolled pain (e.g., hydromorphone 0.2 mg → 0.3mg or 0.4 mg for completely uncontrolled pain).
-- **No relief despite significant dose/interval adjustment** → optimize non-opioid adjuncts, rotate to a different opioid at an equipotent dose, and evaluate for an alternative pain etiology (e.g., infection, compartment syndrome).
+Full PCA use-history checks, adverse-effect monitoring, and titration for inadequate relief or over-sedation are covered on the **[PCA guide](/sickle-cell-pain-crisis-pca)**. In general, combine numeric pain scores with **functional** pain assessment — ability to cough, take a deep breath, and rest comfortably — regardless of analgesia route.
 
 ## 5. Supportive Care
 
@@ -158,7 +103,7 @@ You can query the pump directly by going through its menus to see how many deman
 
 ### Critical safety parameters
 
-- **Never exceed a target hemoglobin of 10 g/dL** (hematocrit 30%) in acute transfusion — exceeding this raises the risk of hyperviscosity, VOC, stroke, and venous thromboembolism.
+- **Never exceed a target hemoglobin of 10 g/dL** (hematocrit 30%) in acute transfusion — exceeding this raises the risk of hyperviscosity, crisis recurrence, stroke, and venous thromboembolism.
 - Post-transfusion hematocrit should not exceed 36%.
 - Do not transfuse patients with a high baseline Hb (> 10 g/dL) absent another clinical indication.
 
@@ -176,26 +121,30 @@ You can query the pump directly by going through its menus to see how many deman
 
 ## 8. Individualize and Document the Care Plan
 
-Vaso-occlusive crisis management differs for every patient with sickle cell disease.
+Pain crisis management differs for every patient with sickle cell disease.
 
 - Document the pain plan in the current hospitalization **and** in the discharge summary to support optimal pain control, shorter length of stay, and patient satisfaction.
 - A clearly documented pain management course helps colleagues manage the same patient during a future crisis.
 
-## Quick-Reference Summary
+## HOSP Sickle Cell Crisis Orders Quick-Reference Summary
 
 <div class="key-message">
 
-| Domain               | Recommendation                                                                                                                                 |
-| -------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------- |
-| First dose           | Within 60 min of arrival; use the ICP if one exists.                                                                                           |
-| Non-opioid analgesia | Scheduled acetaminophen + ibuprofen/naproxen for 5–7 days (not PRN); check renal function first.                                               |
-| Opioid route         | PCA preferred; avoid intermittent IV pushes. Basal rate only if opioid-tolerant or ICP-directed.                                               |
-| PCA start (naïve)    | Fixed PowerPlan doses: morphine 1 mg / 10-min lockout / 24 mg 4-hr limit; Dilaudid 0.2 mg / 10-min lockout / 4.8 mg 4-hr limit. No basal rate. |
-| Monitoring           | Continuous pulse oximetry (mandatory with basal rate); consider end-tidal CO₂ for escalating doses and high-dose PCA; scheduled bowel regimen. |
-| Transfusion          | Not for uncomplicated pain crisis; reserve for stroke, severe ACS, multi-organ failure, fat embolism, Hb drop > 2 g/dL, or sequestration.      |
-| ACS prevention       | Incentive spirometry, 10 breaths/hour while awake; heat therapy, not ice.                                                                      |
-| Constipation         | Order both scheduled and PRN medications to prevent constipation.                                                                              |
-| Transition to oral   | After 24 h of stable control with minimal demand doses; wean basal first, continue bolus 24 h; monitor for withdrawal.                         |
+| Domain               | Recommendation                                                                                                                                  |
+| -------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------- |
+| Home opiates         | Continue home pain meds at home dose and frequency.                                                                                             |
+| First dose           | Within 60 min of arrival; use the ICP if one exists.                                                                                            |
+| Non-opioid analgesia | Scheduled acetaminophen + ibuprofen/naproxen for 5 days (not PRN); check renal function first.                                                  |
+| Opioid route         | PCA preferred; avoid intermittent IV pushes. Basal rate only if opioid-tolerant or ICP-directed.                                                |
+| PCA start (naïve)    | Fixed power-plan doses: morphine or Dilaudid with 10 minute lockout.                                                                            |
+| Monitoring           | Continuous pulse oximetry; use end-tidal CO₂ for an additional layer of monitoring, with higher dose PCA settings, or if basal/continuous rate. |
+| Transfusion          | Not for uncomplicated pain crisis; reserve for stroke, severe ACS, multi-organ failure, fat embolism, Hb drop > 2 g/dL, or sequestration.       |
+| Bowel Regimen        | Scheduled Bowel regimen (default)                                                                                                               |
+| Uncontrolled Pain    | Increase demand dose by 25% if uncontrolled pain; increase by 50% if very severe pain; add End Tidal CO2 monitor when increasing dose           |
+| Controlled Pain      | Decrease demand dose or frequency if not hitting the pump hourly.                                                                               |
+| ACS prevention       | Incentive spirometry, 10 breaths/hour while awake; heat therapy, not ice.                                                                       |
+| Sedation             | Stop PCA if severe sedation; Decrease demand dose and frequency if moderate sedation.                                                           |
+| Transition to oral   | After 24 h of stable control with minimal demand doses; if on basal rate, wean basal first; continue bolus 24 h; monitor for withdrawal.        |
 
 </div>
 
@@ -223,3 +172,7 @@ Treat the pain within an hour, follow the ICP if there is one, schedule non-opio
 14. AAFP Choosing Wisely: Don't routinely transfuse patients with sickle cell disease.
 15. [Management of Sickle Cell Disease](https://sickle.bwh.harvard.edu/scdmanage.html). Brigham and Women's Hospital.
 16. MME/OME Calculator, MDCalc; Opioid Equivalency, StatPearls — NCBI Bookshelf.
+
+---
+
+**Next:** [PCA guide →](/sickle-cell-pain-crisis-pca) — full dosing, monitoring, and titration for opioid analgesia via PCA.

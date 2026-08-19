@@ -3,7 +3,7 @@ export const resourceLinks = [
   { href: '/staff', label: 'Medical Staff Office' },
   { href: '/burnout', label: 'Burnout Help' },
   { href: '/NuDESC', label: 'NuDESC Tip Sheet' },
-  { href: '/scd-voc-powerplan', label: 'Sickle Cell VOC Guide' },
+  { href: '/sickle-cell-pain-crisis', label: 'Sickle Cell Crisis Orders Guide' },
 ];
 
 export const sepsisLinks = [

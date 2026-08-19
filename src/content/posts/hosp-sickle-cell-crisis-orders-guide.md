@@ -1,23 +1,23 @@
 ---
-title: 'New Reference: Sickle Cell VOC Adult Inpatient PowerPlan Guide'
-slug: scd-voc-powerplan-guide
-excerpt: The institutional PowerPlan tip sheets and PCA instructions for adult sickle cell vaso-occlusive crisis are now consolidated into a single reference for hospitalists, APPs, and pharmacy — covering scheduled non-opioid analgesia, PCA dosing, monitoring, and transfusion thresholds.
+title: 'New Reference: HOSP Sickle Cell Crisis Orders Guide'
+slug: hosp-sickle-cell-crisis-orders-guide
+excerpt: The institutional tip sheets and PCA instructions for the HOSP Sickle Cell Crisis Orders power plan are now consolidated into a single reference for hospitalists, APPs, and pharmacy — covering scheduled non-opioid analgesia, PCA dosing, monitoring, and transfusion thresholds.
 date: 2026-07-30
 author: Department of Medicine, Hospital Medicine Division
 category: clinical
 ---
 
-The PowerPlan tip sheets and PCA instructions for managing adult inpatients in acute sickle cell vaso-occlusive crisis (VOC) have been consolidated into one reference guide, now available under **Resources** in the site menu.
+The tip sheets and PCA instructions for managing adult inpatients in acute sickle cell pain crisis, ordered via the **HOSP Sickle Cell Crisis Orders** power plan, have been consolidated into one reference guide, now available under **Resources** in the site menu.
 
 <div class="key-message">
 
-[**Read the full guide: Sickle Cell VOC Adult Inpatient PowerPlan Guide →**](/scd-voc-powerplan)
+[**Read the full guide: HOSP Sickle Cell Crisis Orders Guide →**](/sickle-cell-pain-crisis)
 
 </div>
 
 ## Why this exists
 
-Guidance for VOC admissions was previously spread across separate tip sheets, which made it hard to answer a bedside question quickly — particularly around PCA starting doses and when transfusion is actually indicated. The new guide brings it together for hospitalists, advanced practice providers, and pharmacy staff, with a quick-reference summary table at the end.
+Guidance for sickle cell pain crisis admissions was previously spread across separate tip sheets, which made it hard to answer a bedside question quickly — particularly around PCA starting doses and when transfusion is actually indicated. The new guide brings it together for hospitalists, advanced practice providers, and pharmacy staff, with a quick-reference summary table at the end.
 
 ## What's in it
 
