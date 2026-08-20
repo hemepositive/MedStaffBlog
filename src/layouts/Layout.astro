@@ -14,6 +14,9 @@ export interface Props {
 }
 
 const { title = 'Medical Staff News', description = 'News and updates for the Huntsville Hospital medical staff.' } = Astro.props as Props;
+
+// Replace with your GA4 Measurement ID from analytics.google.com (Admin > Data Streams).
+const GA_MEASUREMENT_ID = 'G-WWTMVR31LH';
 ---
 
 <!doctype html>
@@ -31,6 +34,17 @@ const { title = 'Medical Staff News', description = 'News and updates for the Hu
         document.documentElement.dataset.theme = saved;
       }
     </script>
+    {GA_MEASUREMENT_ID && !GA_MEASUREMENT_ID.includes('XXXXXXXXXX') && (
+      <>
+        <script async src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}></script>
+        <script is:inline define:vars={{ GA_MEASUREMENT_ID }}>
+          window.dataLayer = window.dataLayer || [];
+          function gtag() { dataLayer.push(arguments); }
+          gtag('js', new Date());
+          gtag('config', GA_MEASUREMENT_ID);
+        </script>
+      </>
+    )}
   </head>
   <body>
     <Header />
