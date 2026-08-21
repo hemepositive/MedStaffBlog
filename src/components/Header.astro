@@ -155,11 +155,11 @@ const sepsisActive = sepsisLinks.some((l) => isActive(l.href));
     background: var(--brand-tint);
     font-weight: 600;
   }
-  .resources-menu .chevron {
+  .resources-menu > summary .chevron {
     font-size: 12px;
     transition: transform 0.15s ease;
   }
-  .resources-menu[open] .chevron {
+  .resources-menu[open] > summary .chevron {
     transform: rotate(180deg);
   }
   .resources-menu ul {
