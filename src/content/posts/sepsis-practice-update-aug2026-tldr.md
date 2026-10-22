@@ -4,16 +4,10 @@ excerpt: A condensed version of the sepsis practice update — suspect sepsis ea
 date: 2026-08-12
 author: Department of Critical Care
 category: clinical
-urgency: critical
+urgency: info
 ---
 
 <div class="key-message">
-
-Sepsis is often treated before diagnostic certainty exists. Waiting for all criteria to be met may delay life-saving therapy — clinical judgment remains our most important diagnostic tool.
-
-This is a condensed synopsis. For the full clinical practice update with detailed evidence, data, and citations, see [Early Recognition and Management of Sepsis](/sepsis-practice-update-aug2026).
-
-</div>
 
 ## Suspect sepsis early
 
@@ -36,7 +30,3 @@ Consider sepsis whenever a suspected or confirmed infection is accompanied by **
 - If the full fluid volume isn't clinically indicated, briefly document why (e.g., "concern for fluid overload").
 
 <div class="takeaway">
-
-**Recognize early. Treat promptly. Reassess frequently. Document clearly.**
-
-</div>

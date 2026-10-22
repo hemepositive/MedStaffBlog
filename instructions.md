@@ -161,8 +161,13 @@ category: it-ehr # one of: it-ehr | clinical | education | announcements
 ```
 
 Mapping from the plain-language levels above: Normal = omit `urgency`
-entirely; Warning = `urgency: warning`; Critical = `urgency: critical`;
-Pinned = also add `pinned: true`.
+entirely (or write `urgency: info`); Warning = `urgency: warning`;
+Critical = `urgency: critical`; Pinned = also add `pinned: true`.
+
+"Normal" is only the plain-language name. The site accepts exactly three
+values — `info`, `warning`, `critical` — so writing `urgency: normal` fails
+the build. To clear a flag later, delete the `urgency` line or set it to
+`info`.
 
 **Resource pages** are markdown files in `src/pages/` (e.g.
 `leadership.md`, `burnout.md`, `NuDESC.md`) with this frontmatter:

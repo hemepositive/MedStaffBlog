@@ -4,22 +4,18 @@ excerpt: A new PowerPlan gives providers an alternative to Sepsis Advisor, with 
 date: 2026-08-11
 author: Medical Staff Office
 category: it-ehr
-urgency: warning
+urgency: info
 ---
 
 A new **HOSP Adult Sepsis** PowerPlan is now available, giving providers an alternative to Sepsis Advisor and quick access to the latest evidence-based Sepsis Treatment Bundle recommendations, while automating several Sepsis Core Measure (SEP-1) documentation requirements.
 
 <div class="key-message">
 
-This Sepsis Power Plan covers the basic, universal elements of sepsis management — this PowerPlan should not be used as an all-inclusive inpatient order set.
-
-</div>
-
 ## Accessing the PowerPlan
 
 Search "sepsis" and select **HOSP Adult Sepsis**.
 
-![Order search screen showing HOSP Adult Sepsis among the results when searching "sepsis"](/images/sepsis-ip-pp/search-sepsis-hosp-adult.png)
+![Order search screen showing HOSP Adult Sepsis among the results when searching ](/images/sepsis-ip-pp/search-sepsis-hosp-adult.png)
 
 The Sepsis Advisor continues to be available and will be updated ASAP.
 
@@ -129,10 +125,6 @@ Unchanged existing subplan.
 - Vancomycin and Zosyn are the alternative for anaerobe coverage.
 
 <div class="takeaway">
-
-Search "sepsis" and select **HOSP Adult Sepsis** to access the new PowerPlan. It covers universal fluid, vasopressor, lab, and consult elements plus antibiotic subplans by infection source — but it is not a complete treatment plan, and complex cases may still need orders outside the PowerPlan with Pharmacy/ID input.
-
-</div>
 
 ## References
 
