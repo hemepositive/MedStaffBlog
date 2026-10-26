@@ -28,7 +28,7 @@ Copy an item block once per post and delete the blocks you don't use.
 - Email images go in `public/images/email-images/` and appear at
   `https://medicalstaffnews.com/images/email-images/<file>`. **Push to `main` and wait for the
   deploy before sending**, or the images will show as broken.
-- Keep images under about 100 KB and 540 px wide (264 px for side-by-side). Give each one alt text.
+- Keep images under about 100 KB and 600 px wide (290 px for side-by-side). Give each one alt text.
 - Link the image to the post so a click takes readers to the article.
 
 ## Sending

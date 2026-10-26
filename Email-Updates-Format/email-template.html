@@ -8,135 +8,91 @@
   HH MEDICAL STAFF PROVIDER UPDATE: EMAIL TEMPLATE
   See README.md in this folder for how to fill it in and send it.
 
-  Email-safe by design: table layout, inline styles, no external CSS or fonts.
+  Plain, fluid HTML (no tables, no fixed width): the email fills the width of the
+  compose window and the reader's screen, and uses a plain Calibri/Arial font that matches Outlook and Zimbra.
   Replace everything in [BRACKETS]. Delete any block you don't need.
   Images and links must be absolute https://medicalstaffnews.com/... URLs.
 -->
-<style>
-  @media only screen and (max-width: 620px) {
-    .col { display: block !important; width: 100% !important; padding: 0 0 12px 0 !important; }
-    .pad { padding-left: 16px !important; padding-right: 16px !important; }
-  }
-</style>
 </head>
-<body style="margin:0; padding:0; background-color:#ffffff;">
-<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="background-color:#ffffff;">
-<tr><td align="center" style="padding:24px 0;">
+<body style="margin:0; padding:16px; font-family:Calibri, Arial, sans-serif; font-size:15px; line-height:1.5; color:#1f2933;">
 
-<table role="presentation" width="600" cellpadding="0" cellspacing="0" border="0" style="width:600px; max-width:100%; font-family:'Segoe UI', Calibri, Arial, sans-serif; font-size:15px; line-height:1.5; color:#1f2933;">
+<!-- ============ HEADER ============ -->
+<div style="border-bottom:4px solid #2e7d8c; padding-bottom:12px; margin-bottom:20px;">
+  <div style="font-size:13px; color:#7b8794;">HH Medical Staff</div>
+  <div style="font-size:24px; font-weight:600; color:#7b8794;">Provider Update: [MONTH YEAR]</div>
+</div>
 
-  <!-- ============ HEADER ============ -->
-  <tr>
-    <td class="pad" style="padding:0 30px 14px 30px; border-bottom:4px solid #2e7d8c;">
-      <div style="font-size:13px; color:#7b8794;">HH Medical Staff</div>
-      <div style="font-size:24px; font-weight:600; color:#7b8794;">Provider Update: [MONTH YEAR]</div>
-    </td>
-  </tr>
+<!-- ============ GREETING ============ -->
+<p>Good [morning/afternoon],</p>
+<p>Here are this month&rsquo;s updates for HH providers. Full details are in the
+  <a href="https://medicalstaffnews.com/" style="color:#2e7d8c; font-weight:600;">HH Medical Staff Newsletter</a>.</p>
 
-  <!-- ============ GREETING ============ -->
-  <tr>
-    <td class="pad" style="padding:22px 30px 6px 30px;">
-      <p style="margin:0 0 12px 0;">Good [morning/afternoon],</p>
-      <p style="margin:0;">Here are this month&rsquo;s updates for HH providers. Full details are in the
-        <a href="https://medicalstaffnews.com/" style="color:#2e7d8c; font-weight:600;">HH Medical Staff Newsletter</a>.</p>
-    </td>
-  </tr>
+<!-- ============ OPTIONAL: ATTENTION CALLOUT ============
+     Use only for a change that needs action. Delete the block otherwise.
+     Red is for active problems only (downtime, patient-safety bug). -->
+<div style="background-color:#fdf1f0; border-left:4px solid #b42318; padding:12px 16px; margin:18px 0;">
+  <div style="font-size:16px; font-weight:600; color:#b42318;">[Action needed headline]</div>
+  <div style="margin-top:4px;">[One or two sentences. Say what to do and by when, e.g. <strong>Wednesday, October 28</strong>.]
+    <a href="https://medicalstaffnews.com/[post-slug]/" style="color:#2e7d8c; font-weight:600;">Read the full article</a></div>
+</div>
 
-  <!-- ============ OPTIONAL: ATTENTION CALLOUT ============
-       Use only for a change that needs action. Delete the block otherwise.
-       Red is for active problems only (downtime, patient-safety bug). -->
-  <tr>
-    <td class="pad" style="padding:18px 30px 0 30px;">
-      <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
-        <tr>
-          <td style="background-color:#fdf1f0; border-left:4px solid #b42318; padding:12px 16px;">
-            <div style="font-size:16px; font-weight:600; color:#b42318;">[Action needed headline]</div>
-            <div style="margin-top:4px;">[One or two sentences. Say what to do and by when, e.g. <strong>Wednesday, October 28</strong>.]
-              <a href="https://medicalstaffnews.com/[post-slug]/" style="color:#2e7d8c; font-weight:600;">Read the full article</a></div>
-          </td>
-        </tr>
-      </table>
-    </td>
-  </tr>
+<!-- ============ ITEM (copy this whole block for each post) ============ -->
+<hr style="border:0; border-top:1px solid #d9dee3; margin:24px 0;">
+<h2 style="font-size:19px; font-weight:600; color:#1e3a5f; margin:0;">[Post headline: short, says what changed]</h2>
+<div style="font-size:14px; color:#7b8794; margin-top:4px;">[One-sentence summary of the post.]</div>
+<ul style="margin:12px 0 0 0; padding-left:20px;">
+  <li><strong>[Key term]</strong> [what changed or what to do.]</li>
+  <li>[Second point.]</li>
+  <li>[Third point.]</li>
+</ul>
+<p style="margin:10px 0 0 0;"><a href="https://medicalstaffnews.com/[post-slug]/" style="color:#2e7d8c; font-weight:600;">Read the full article</a></p>
 
-  <!-- ============ ITEM (copy this whole block for each post) ============ -->
-  <tr>
-    <td class="pad" style="padding:26px 30px 0 30px;">
-      <div style="font-size:19px; font-weight:600; color:#1e3a5f; line-height:1.3;">[Post headline: short, says what changed]</div>
-      <div style="font-size:14px; color:#7b8794; margin-top:4px;">[One-sentence summary of the post.]</div>
-      <ul style="margin:12px 0 0 0; padding-left:20px;">
-        <li style="margin:0 0 8px 0;"><strong>[Key term]</strong> [what changed or what to do.]</li>
-        <li style="margin:0 0 8px 0;">[Second point.]</li>
-        <li style="margin:0 0 8px 0;">[Third point.]</li>
-      </ul>
-      <p style="margin:6px 0 0 0;"><a href="https://medicalstaffnews.com/[post-slug]/" style="color:#2e7d8c; font-weight:600;">Read the full article</a></p>
-    </td>
-  </tr>
-  <tr><td class="pad" style="padding:22px 30px 0 30px;"><div style="border-top:1px solid #d9dee3; font-size:0; line-height:0;">&nbsp;</div></td></tr>
+<!-- ============ ITEM WITH ONE IMAGE ============
+     Upload the image to public/images/email-images/ and deploy the site first.
+     Keep width="600" so it never stretches on wide screens. Always keep alt text. -->
+<hr style="border:0; border-top:1px solid #d9dee3; margin:24px 0;">
+<h2 style="font-size:19px; font-weight:600; color:#1e3a5f; margin:0;">[Post headline]</h2>
+<div style="font-size:14px; color:#7b8794; margin-top:4px;">[One-sentence summary.]</div>
+<ul style="margin:12px 0 0 0; padding-left:20px;">
+  <li>[Point one.]</li>
+  <li>[Point two.]</li>
+</ul>
+<p style="margin:20px 0 0 0;"><a href="https://medicalstaffnews.com/[post-slug]/"><img src="https://medicalstaffnews.com/images/email-images/[image-file].jpg" width="600" alt="[Describe the image]" style="max-width:100%; height:auto; border:0;"></a></p>
+<p style="margin:10px 0 0 0;"><a href="https://medicalstaffnews.com/[post-slug]/" style="color:#2e7d8c; font-weight:600;">Read the full article</a></p>
 
-  <!-- ============ ITEM WITH ONE IMAGE ============
-       Image must be uploaded to public/images/email-images/ and the site deployed first.
-       Set width to the image's real width, up to 540. Always keep alt text. -->
-  <tr>
-    <td class="pad" style="padding:26px 30px 0 30px;">
-      <div style="font-size:19px; font-weight:600; color:#1e3a5f; line-height:1.3;">[Post headline]</div>
-      <div style="font-size:14px; color:#7b8794; margin-top:4px;">[One-sentence summary.]</div>
-      <ul style="margin:12px 0 0 0; padding-left:20px;">
-        <li style="margin:0 0 8px 0;">[Point one.]</li>
-        <li style="margin:0 0 8px 0;">[Point two.]</li>
-      </ul>
-      <p style="margin:12px 0 0 0;">
-        <a href="https://medicalstaffnews.com/[post-slug]/"><img src="https://medicalstaffnews.com/images/email-images/[image-file].png" width="540" alt="[Describe the image]" style="display:block; width:100%; max-width:540px; height:auto; border:0; border-radius:6px;"></a>
-      </p>
-      <p style="margin:12px 0 0 0;"><a href="https://medicalstaffnews.com/[post-slug]/" style="color:#2e7d8c; font-weight:600;">Read the full article</a></p>
-    </td>
-  </tr>
-  <tr><td class="pad" style="padding:22px 30px 0 30px;"><div style="border-top:1px solid #d9dee3; font-size:0; line-height:0;">&nbsp;</div></td></tr>
+<!-- ============ ITEM WITH TWO SIDE-BY-SIDE IMAGES (e.g. correct vs incorrect) ============
+     The two blocks sit next to each other on wide screens and wrap on narrow ones.
+     Caption colors: green = correct, red = incorrect. -->
+<hr style="border:0; border-top:1px solid #d9dee3; margin:24px 0;">
+<h2 style="font-size:19px; font-weight:600; color:#1e3a5f; margin:0;">[Post headline]</h2>
+<div style="font-size:14px; color:#7b8794; margin-top:4px;">[One-sentence summary.]</div>
+<ul style="margin:12px 0 0 0; padding-left:20px;">
+  <li>[Point one.]</li>
+  <li>[Point two.]</li>
+</ul>
+<div style="margin-top:20px;">
+  <div style="display:inline-block; vertical-align:top; margin:0 12px 12px 0;">
+    <img src="https://medicalstaffnews.com/images/email-images/[image-left].jpeg" width="290" alt="[Describe left image]" style="max-width:100%; height:auto; border:0;">
+    <div style="font-size:13px; font-weight:600; color:#2f7d4f; margin-top:6px;">Correct: [caption]</div>
+  </div>
+  <div style="display:inline-block; vertical-align:top; margin:0 12px 12px 0;">
+    <img src="https://medicalstaffnews.com/images/email-images/[image-right].jpeg" width="290" alt="[Describe right image]" style="max-width:100%; height:auto; border:0;">
+    <div style="font-size:13px; font-weight:600; color:#b42318; margin-top:6px;">Incorrect: [caption]</div>
+  </div>
+</div>
+<p style="margin:0;"><a href="https://medicalstaffnews.com/[post-slug]/" style="color:#2e7d8c; font-weight:600;">Read the full article</a></p>
 
-  <!-- ============ ITEM WITH TWO SIDE-BY-SIDE IMAGES (e.g. correct vs incorrect) ============
-       Stacks to one column on phones. Caption colors: green = correct, red = incorrect. -->
-  <tr>
-    <td class="pad" style="padding:26px 30px 0 30px;">
-      <div style="font-size:19px; font-weight:600; color:#1e3a5f; line-height:1.3;">[Post headline]</div>
-      <div style="font-size:14px; color:#7b8794; margin-top:4px;">[One-sentence summary.]</div>
-      <ul style="margin:12px 0 0 0; padding-left:20px;">
-        <li style="margin:0 0 8px 0;">[Point one.]</li>
-        <li style="margin:0 0 8px 0;">[Point two.]</li>
-      </ul>
-      <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="margin-top:12px;">
-        <tr>
-          <td class="col" width="50%" valign="top" style="padding-right:6px;">
-            <img src="https://medicalstaffnews.com/images/email-images/[image-left].jpeg" width="264" alt="[Describe left image]" style="display:block; width:100%; max-width:264px; height:auto; border:0; border-radius:6px;">
-            <div style="font-size:13px; font-weight:600; color:#2f7d4f; margin-top:6px;">Correct: [caption]</div>
-          </td>
-          <td class="col" width="50%" valign="top" style="padding-left:6px;">
-            <img src="https://medicalstaffnews.com/images/email-images/[image-right].jpeg" width="264" alt="[Describe right image]" style="display:block; width:100%; max-width:264px; height:auto; border:0; border-radius:6px;">
-            <div style="font-size:13px; font-weight:600; color:#b42318; margin-top:6px;">Incorrect: [caption]</div>
-          </td>
-        </tr>
-      </table>
-      <p style="margin:12px 0 0 0;"><a href="https://medicalstaffnews.com/[post-slug]/" style="color:#2e7d8c; font-weight:600;">Read the full article</a></p>
-    </td>
-  </tr>
-  <tr><td class="pad" style="padding:22px 30px 0 30px;"><div style="border-top:1px solid #d9dee3; font-size:0; line-height:0;">&nbsp;</div></td></tr>
+<!-- ============ CLOSING + SIGNATURE ============ -->
+<hr style="border:0; border-top:1px solid #d9dee3; margin:24px 0;">
+<p>Thank you, and send me feedback if you see any errors or have questions.</p>
+<p style="margin:0;">&nbsp;</p>
+<p style="margin:0; font-size:14px; line-height:1.45;">
+  Jonathan White, MD<br>
+  Vice President of Medical Affairs<br>
+  Medical Director of IT<br>
+  Huntsville Hospital<br>
+  256.265.2789 (office)
+</p>
 
-  <!-- ============ CLOSING + SIGNATURE ============ -->
-  <tr>
-    <td class="pad" style="padding:22px 30px 6px 30px;">
-      <p style="margin:0 0 20px 0;">Thank you, and send me feedback if you see any errors or have questions.</p>
-      <p style="margin:0; font-size:14px; line-height:1.45;">
-        Jonathan White, MD<br>
-        Vice President of Medical Affairs<br>
-        Medical Director of IT<br>
-        Huntsville Hospital<br>
-        256.265.2789 (office)
-      </p>
-    </td>
-  </tr>
-
-</table>
-
-</td></tr>
-</table>
 </body>
 </html>
