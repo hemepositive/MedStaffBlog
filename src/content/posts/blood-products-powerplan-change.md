@@ -1,22 +1,22 @@
 ---
 title: 'New HOSP Blood Products PowerPlan: Subphase Ordering Instructions'
-excerpt: A new HOSP Blood Products PowerPlan replaces the old one on November 2. Choose a subphase based on the patient's blood bank status and whether blood is needed now.
-date: 2026-10-22
+excerpt: A new HOSP Blood Products PowerPlan replaces the old one on October 26. Choose a subphase based on the patient's blood bank status and whether blood is needed now.
+date: 2026-10-26
 author: Medical Staff Office
 category: it-ehr
 urgency: critical
-effectiveDate: 2026-11-02
+effectiveDate: 2026-10-26
 ---
 
 <div class="key-message">
 
-Starting **November 2, 2026**, the new HOSP Blood Products PowerPlan replaces the current blood products PowerPlan. The old PowerPlan will be discontinued.
+Starting **October 26, 2026**, the new HOSP Blood Products PowerPlan replaces the current blood products PowerPlan. The old PowerPlan will be discontinued.
 
 </div>
 
 ## What is changing
 
-On **November 2, 2026**, blood products will be ordered from the new **HOSP Blood Products PowerPlan**. The old PowerPlan will be discontinued on that date, so use the new one for all blood product orders going forward.
+On **October 26, 2026**, blood products will be ordered from the new **HOSP Blood Products PowerPlan**. The old PowerPlan will be discontinued on that date, so use the new one for all blood product orders going forward.
 
 The new PowerPlan is organized into subphases. You select the subphase that matches what the patient needs, instead of working from one long list of orders.
 
@@ -47,6 +47,6 @@ The new PowerPlan is organized into subphases. You select the subphase that matc
 
 <div class="takeaway">
 
-**Beginning November 2, use the new HOSP Blood Products PowerPlan. Check the blood bank status first, then select the matching subphase.**
+**Beginning October 26, use the new HOSP Blood Products PowerPlan. Check the blood bank status first, then select the matching subphase.**
 
 </div>
